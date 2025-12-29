@@ -91,7 +91,10 @@
         <div class="rounded-3xl border border-white/10 bg-slate-900/70 p-6 shadow-lg shadow-slate-900/40">
           <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Quick links</p>
           <div class="mt-4 space-y-3">
-            <button class="flex w-full items-center justify-between rounded-2xl bg-emerald-500/20 px-4 py-3 text-left text-sm font-medium text-emerald-100 transition hover:bg-emerald-500/30">
+            <button
+              class="flex w-full items-center justify-between rounded-2xl bg-emerald-500/20 px-4 py-3 text-left text-sm font-medium text-emerald-100 transition hover:bg-emerald-500/30"
+              @click="emit('navigate', 'new-thread')"
+            >
               <span>New Thread</span>
               <span class="text-lg">＋</span>
             </button>
@@ -127,3 +130,7 @@
     </main>
   </div>
 </template>
+
+<script setup>
+const emit = defineEmits(['navigate'])
+</script>
