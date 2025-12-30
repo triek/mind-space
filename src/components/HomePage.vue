@@ -59,7 +59,10 @@
             </p>
             <div class="mt-6 flex items-center justify-between text-sm">
               <p class="text-slate-400">Next step</p>
-              <button class="rounded-full bg-emerald-500/20 px-4 py-2 font-medium text-emerald-200 transition hover:bg-emerald-500/30">
+              <button
+                class="rounded-full bg-emerald-500/20 px-4 py-2 font-medium text-emerald-200 transition hover:bg-emerald-500/30"
+                @click="emit('navigate', 'thread-detail')"
+              >
                 Continue thread
               </button>
             </div>
