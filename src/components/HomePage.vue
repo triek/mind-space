@@ -6,6 +6,7 @@
           <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Mind Space</p>
           <h1 class="text-3xl font-semibold text-white">Home Dashboard</h1>
         </div>
+
         <div class="rounded-full border border-emerald-400/40 bg-emerald-500/10 px-4 py-2 text-sm text-emerald-200">
           Today · Personalized support
         </div>
@@ -23,11 +24,13 @@
                 Choose the mood that best fits right now. We will tailor your next steps.
               </p>
             </div>
+
             <div class="flex items-center gap-2 rounded-full bg-slate-800/70 px-3 py-1 text-xs text-slate-300">
               <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
               Checking in
             </div>
           </div>
+
           <div class="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
             <button class="rounded-2xl border border-white/10 bg-slate-800/80 px-4 py-3 text-sm font-medium text-white transition hover:border-emerald-400/60 hover:text-emerald-200">
               🌤️ Calm
@@ -53,6 +56,7 @@
               </div>
               <span class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300">Updated 2h ago</span>
             </div>
+
             <p class="mt-4 text-sm leading-relaxed text-slate-300">
               You shared that the past week felt packed with meetings. Suggested focus: short
               recovery breaks and aligning priorities with energy levels.
@@ -77,6 +81,7 @@
                 <p class="mt-3 text-3xl font-semibold text-white">7</p>
                 <p class="text-xs text-emerald-200">Mild</p>
               </div>
+              
               <div class="rounded-2xl bg-slate-800/70 p-4">
                 <p class="text-xs uppercase tracking-[0.2em] text-slate-400">GAD-7</p>
                 <p class="mt-3 text-3xl font-semibold text-white">5</p>

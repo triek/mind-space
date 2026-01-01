@@ -14,11 +14,9 @@ const activeComponent = computed(() => {
   if (activePage.value === 'new-thread') {
     return NewConsultationPage
   }
-
   if (activePage.value === 'thread-detail') {
     return ThreadDetailPage
   }
-
   return HomePage
 })
 
