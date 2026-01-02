@@ -106,7 +106,10 @@
               <span>New Thread</span>
               <span class="text-lg">＋</span>
             </button>
-            <button class="flex w-full items-center justify-between rounded-2xl bg-sky-500/20 px-4 py-3 text-left text-sm font-medium text-sky-100 transition hover:bg-sky-500/30">
+            <button
+              class="flex w-full items-center justify-between rounded-2xl bg-sky-500/20 px-4 py-3 text-left text-sm font-medium text-sky-100 transition hover:bg-sky-500/30"
+              @click="emit('navigate', 'check-in-quiz')"
+            >
               <span>Do Check-in</span>
               <span class="text-lg">🗓️</span>
             </button>
