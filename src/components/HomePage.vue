@@ -88,7 +88,10 @@
                 <p class="text-xs text-sky-200">Minimal</p>
               </div>
             </div>
-            <button class="mt-6 w-full rounded-2xl border border-white/10 bg-slate-800/70 px-4 py-3 text-sm font-medium text-white transition hover:border-emerald-400/50 hover:text-emerald-200">
+            <button
+              class="mt-6 w-full rounded-2xl border border-white/10 bg-slate-800/70 px-4 py-3 text-sm font-medium text-white transition hover:border-emerald-400/50 hover:text-emerald-200"
+              @click="emit('navigate', 'progress')"
+            >
               Review assessment history
             </button>
           </div>
@@ -112,6 +115,13 @@
             >
               <span>Do Check-in</span>
               <span class="text-lg">🗓️</span>
+            </button>
+            <button
+              class="flex w-full items-center justify-between rounded-2xl bg-indigo-500/20 px-4 py-3 text-left text-sm font-medium text-indigo-100 transition hover:bg-indigo-500/30"
+              @click="emit('navigate', 'progress')"
+            >
+              <span>Progress Page</span>
+              <span class="text-lg">📈</span>
             </button>
             <button class="flex w-full items-center justify-between rounded-2xl bg-slate-800/80 px-4 py-3 text-left text-sm font-medium text-white transition hover:border hover:border-white/20">
               <span>Resources</span>
