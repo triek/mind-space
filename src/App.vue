@@ -8,6 +8,7 @@ import HomePage from './components/HomePage.vue'
 import CheckInQuizPage from './components/CheckInQuizPage.vue'
 import NewConsultationPage from './components/NewConsultationPage.vue'
 import ThreadDetailPage from './components/ThreadDetailPage.vue'
+import ProgressPage from './components/ProgressPage.vue'
 
 const activePage = ref('home')
 
@@ -22,6 +23,10 @@ const activeComponent = computed(() => {
 
   if (activePage.value === 'thread-detail') {
     return ThreadDetailPage
+  }
+
+  if (activePage.value === 'progress') {
+    return ProgressPage
   }
   return HomePage
 })
