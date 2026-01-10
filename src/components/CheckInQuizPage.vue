@@ -316,8 +316,6 @@ const scoreMeaning = computed(() => {
   return selectedQuiz.value.meaning.find((entry) => totalScore.value <= entry.max) || null
 })
 
-
-
 const progressText = computed(() => {
   if (!selectedQuiz.value) {
     return 'Select a quiz to begin'
@@ -330,10 +328,12 @@ const progressText = computed(() => {
   }
   return 'Ready to start'
 })
+
 const currentQuestion = computed(() => {
   if (!selectedQuiz.value) return ''
   return selectedQuiz.value.questions[currentQuestionIndex.value]
 })
+
 const nextQuestionPreview = computed(() => {
   if (!selectedQuiz.value) return 'Select a quiz'
   if (currentQuestionIndex.value >= selectedQuiz.value.questions.length - 1) {
@@ -341,6 +341,7 @@ const nextQuestionPreview = computed(() => {
   }
   return selectedQuiz.value.questions[currentQuestionIndex.value + 1]
 })
+
 const selectQuiz = (id) => {
   selectedQuizId.value = id
   resetQuiz()
