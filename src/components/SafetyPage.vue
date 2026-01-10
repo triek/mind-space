@@ -79,8 +79,9 @@
       </aside>
     </main>
   </div>
-</template>
 
+</template>
 <script setup>
 const emit = defineEmits(['navigate'])
 </script>
+
