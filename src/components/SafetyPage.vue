@@ -79,19 +79,10 @@
       </aside>
     </main>
   </div>
+  <div>
+    
+  </div>
 </template>
-
-<div></div>
-
-
-
-
-
-
-
-
-
-
 
 <script setup>
 const emit = defineEmits(['navigate'])
