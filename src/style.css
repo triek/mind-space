@@ -21,6 +21,10 @@
     @apply bg-slate-900/60 px-4;
   }
 
+  .page-header__layout {
+    @apply flex flex-wrap items-center justify-between gap-4;
+  }
+
   .page-container-5xl {
     @apply mx-auto max-w-5xl px-4;
   }

@@ -1,7 +1,7 @@
 <template>
   <div class="app-shell">
     <header class="page-header page-header--muted">
-      <div class="page-container-6xl flex flex-wrap items-center justify-center gap-4 py-4">
+      <div class="page-container-6xl page-header__layout py-4">
         <div>
           <h1 class="text-3xl font-semibold text-white">MindSpace</h1>
         </div>
