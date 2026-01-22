@@ -4,7 +4,7 @@
       <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-6">
         <div>
           <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Mind Space</p>
-          <h1 class="text-3xl font-semibold text-white">Check-in Quiz</h1>
+          <h1 class="text-3xl font-semibold text-white">Assessment</h1>
         </div>
         <div class="flex items-center gap-3">
           <div class="rounded-full border border-emerald-400/40 bg-emerald-500/10 px-4 py-2 text-sm text-emerald-200">

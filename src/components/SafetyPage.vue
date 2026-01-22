@@ -4,7 +4,7 @@
       <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-6">
         <div>
           <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Mind Space</p>
-          <h1 class="text-3xl font-semibold text-white">Safety Page</h1>
+          <h1 class="text-3xl font-semibold text-white">Urgent Help</h1>
           <p class="mt-2 text-sm text-slate-300">
             If you are in danger, contact local emergency services.
           </p>
