@@ -15,7 +15,7 @@
       </div>
     </header>
 
-    <main class="page-container-6xl grid gap-6 py-10 lg:grid-cols-[2fr_1fr]">
+    <main class="page-container-6xl grid gap-6 py-4 lg:grid-cols-[2fr_1fr]">
       <section class="space-y-6">
         <div class="rounded-3xl border border-rose-500/40 bg-rose-500/10 p-6 shadow-lg shadow-slate-900/40">
           <p class="text-sm uppercase tracking-[0.2em] text-rose-200">Immediate support</p>
