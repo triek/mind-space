@@ -1,7 +1,7 @@
 <template>
-  <div class="min-h-screen bg-slate-950 text-slate-100">
-    <header class="border-b border-white/10 bg-slate-900/60">
-      <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+  <div class="app-shell">
+    <header class="page-header page-header--muted">
+      <div class="page-container-6xl flex items-center justify-between py-4">
         <div>
           <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Mind Space</p>
           <h1 class="text-3xl font-semibold text-white">Thread Detail</h1>
@@ -15,9 +15,9 @@
       </div>
     </header>
 
-    <main class="mx-auto grid max-w-6xl gap-6 px-6 py-10 lg:grid-cols-[2fr_1fr]">
+    <main class="page-container-6xl grid gap-6 py-4 lg:grid-cols-[2fr_1fr]">
       <section class="space-y-6">
-        <div class="rounded-3xl border border-white/10 bg-slate-900/70 p-6 shadow-lg shadow-slate-900/40">
+        <div class="page-section">
           <div class="flex flex-wrap items-start justify-between gap-4">
             <div>
               <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Timeline</p>
@@ -27,10 +27,10 @@
                 now.
               </p>
             </div>
-            <span class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300">Active</span>
+            <span class="pill-muted">Active</span>
           </div>
           <div class="mt-6 space-y-4">
-            <div class="rounded-2xl border border-white/10 bg-slate-800/70 p-4">
+            <div class="panel-item p-4">
               <p class="text-xs uppercase tracking-[0.2em] text-slate-400">You · 9:10 AM</p>
               <p class="mt-2 text-sm text-slate-100">
                 I felt stretched thin this week and had trouble disconnecting after work.
@@ -43,7 +43,7 @@
                 out of work mode.
               </p>
             </div>
-            <div class="rounded-2xl border border-white/10 bg-slate-800/70 p-4">
+            <div class="panel-item p-4">
               <p class="text-xs uppercase tracking-[0.2em] text-slate-400">You · 9:32 AM</p>
               <p class="mt-2 text-sm text-slate-100">
                 I can try a quick walk and a short breathing exercise before dinner.
@@ -58,7 +58,7 @@
           </div>
         </div>
 
-        <div class="rounded-3xl border border-white/10 bg-slate-900/70 p-6 shadow-lg shadow-slate-900/40">
+        <div class="page-section">
           <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Add message</p>
           <div class="mt-4 space-y-4">
             <textarea
@@ -79,34 +79,34 @@
       </section>
 
       <aside class="space-y-6">
-        <div class="rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-900/70 to-emerald-500/10 p-6 shadow-lg shadow-slate-900/40">
+        <div class="page-section page-section--gradient-emerald-strong">
           <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Simple commands</p>
           <div class="mt-5 space-y-4">
-            <button class="flex w-full items-center justify-between rounded-2xl border border-white/10 bg-slate-800/70 px-4 py-3 text-left text-sm font-medium text-white transition hover:border-emerald-400/60 hover:text-emerald-200">
+            <button class="panel-item flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-white transition hover:border-emerald-400/60 hover:text-emerald-200">
               <span>Send Message</span>
               <span class="text-lg">↗</span>
             </button>
-            <button class="flex w-full items-center justify-between rounded-2xl border border-white/10 bg-slate-800/70 px-4 py-3 text-left text-sm font-medium text-white transition hover:border-emerald-400/60 hover:text-emerald-200">
+            <button class="panel-item flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-white transition hover:border-emerald-400/60 hover:text-emerald-200">
               <span>Mark As Helpful</span>
               <span class="text-lg">★</span>
             </button>
-            <button class="flex w-full items-center justify-between rounded-2xl border border-white/10 bg-slate-800/70 px-4 py-3 text-left text-sm font-medium text-white transition hover:border-emerald-400/60 hover:text-emerald-200">
+            <button class="panel-item flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-white transition hover:border-emerald-400/60 hover:text-emerald-200">
               <span>Attach Resource</span>
               <span class="text-lg">＋</span>
             </button>
           </div>
         </div>
 
-        <div class="rounded-3xl border border-white/10 bg-slate-900/70 p-6 shadow-lg shadow-slate-900/40">
+        <div class="page-section">
           <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Thread summary</p>
           <p class="mt-3 text-sm text-slate-300">
             Focus area: transition rituals, work boundary reminders, and restorative breaks.
           </p>
           <div class="mt-6 grid gap-3">
-            <div class="rounded-2xl bg-slate-800/70 px-4 py-3 text-xs text-slate-300">
+            <div class="panel-item px-4 py-3 text-xs text-slate-300">
               Next check-in: Tomorrow morning
             </div>
-            <div class="rounded-2xl bg-slate-800/70 px-4 py-3 text-xs text-slate-300">
+            <div class="panel-item px-4 py-3 text-xs text-slate-300">
               Resource queued: 2-minute grounding audio
             </div>
           </div>

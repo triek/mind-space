@@ -1,13 +1,10 @@
 <template>
-  <div class="min-h-screen bg-slate-950 text-slate-100">
-    <header class="border-b border-white/10 bg-slate-900/60">
-      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-6">
+  <div class="app-shell">
+    <header class="page-header page-header--muted">
+      <div class="page-container-6xl flex flex-wrap items-center justify-between gap-4 py-4">
         <div>
           <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Mind Space</p>
           <h1 class="text-3xl font-semibold text-white">Progress Page</h1>
-          <p class="mt-2 text-sm text-slate-300">
-            Review your assessment trends and mood check-ins over time.
-          </p>
         </div>
         <button
           class="rounded-full border border-white/10 bg-slate-800/70 px-4 py-2 text-sm text-slate-200 transition hover:border-emerald-400/50 hover:text-emerald-100"
@@ -18,15 +15,15 @@
       </div>
     </header>
 
-    <main class="mx-auto grid max-w-6xl gap-6 px-6 py-10 lg:grid-cols-[2fr_1fr]">
+    <main class="page-container-6xl grid gap-6 py-4 lg:grid-cols-[2fr_1fr]">
       <section class="space-y-6">
-        <div class="rounded-3xl border border-white/10 bg-slate-900/70 p-6 shadow-lg shadow-slate-900/40">
+        <div class="page-section">
           <div class="flex flex-wrap items-center justify-between gap-3">
             <div>
               <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Score trends</p>
               <h2 class="text-2xl font-semibold text-white">Past scores over time</h2>
             </div>
-            <div class="flex items-center gap-2 rounded-full border border-white/10 bg-slate-800/70 px-3 py-1 text-xs text-slate-300">
+            <div class="pill-muted--bordered flex items-center gap-2">
               <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
               {{ filteredScores.length }} records
             </div>
@@ -36,7 +33,7 @@
             <div
               v-for="score in filteredScores"
               :key="`${score.date}-${score.type}`"
-              class="rounded-2xl border border-white/10 bg-slate-800/70 p-4"
+              class="panel-item p-4"
             >
               <div class="flex flex-wrap items-center justify-between gap-2">
                 <div>
@@ -64,20 +61,20 @@
           </p>
         </div>
 
-        <div class="rounded-3xl border border-white/10 bg-slate-900/70 p-6 shadow-lg shadow-slate-900/40">
+        <div class="page-section">
           <div class="flex items-center justify-between">
             <div>
               <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Mood history list</p>
               <h2 class="text-2xl font-semibold text-white">Recent check-ins</h2>
             </div>
-            <span class="rounded-full bg-slate-800/70 px-3 py-1 text-xs text-slate-300">Last 14 days</span>
+            <span class="pill-muted">Last 14 days</span>
           </div>
 
           <ul v-if="moodHistory.length" class="mt-6 space-y-3">
             <li
               v-for="mood in moodHistory"
               :key="`${mood.date}-${mood.label}`"
-              class="flex items-center justify-between rounded-2xl border border-white/10 bg-slate-800/70 px-4 py-3"
+              class="panel-item flex items-center justify-between px-4 py-3"
             >
               <div>
                 <p class="text-sm font-medium text-white">{{ mood.label }}</p>
@@ -93,10 +90,10 @@
       </section>
 
       <aside class="space-y-6">
-        <div class="rounded-3xl border border-white/10 bg-slate-900/70 p-6 shadow-lg shadow-slate-900/40">
+        <div class="page-section">
           <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Simple commands</p>
           <div class="mt-5 space-y-4">
-            <div class="rounded-2xl border border-white/10 bg-slate-800/70 px-4 py-3">
+            <div class="panel-item px-4 py-3">
               <label class="text-xs uppercase tracking-[0.2em] text-slate-400" for="quizFilter">
                 Filter by quiz type
               </label>
@@ -111,7 +108,7 @@
             </div>
 
             <button
-              class="flex w-full items-center justify-between rounded-2xl border border-white/10 bg-slate-800/70 px-4 py-3 text-left text-sm font-medium text-white transition hover:border-sky-400/50 hover:text-sky-200"
+              class="panel-item flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-white transition hover:border-sky-400/50 hover:text-sky-200"
               @click="toggleLast7Days"
             >
               <span>View last 7 days</span>
@@ -128,7 +125,7 @@
           </div>
         </div>
 
-        <div class="rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-900/60 to-emerald-500/10 p-6 shadow-lg shadow-slate-900/40">
+        <div class="page-section page-section--gradient-emerald">
           <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Insights</p>
           <div class="mt-4 space-y-3 text-sm text-slate-300">
             <p>

@@ -1,28 +1,25 @@
 <template>
-  <div class="min-h-screen bg-slate-950 text-slate-100">
-    <header class="border-b border-white/10 bg-slate-900/60">
-      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-6">
+  <div class="app-shell">
+    <header class="page-header page-header--muted">
+      <div class="page-container-6xl flex flex-wrap items-center justify-between gap-4 py-4">
         <div>
           <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Mind Space</p>
           <h1 class="text-3xl font-semibold text-white">Assessment</h1>
         </div>
         <div class="flex items-center gap-3">
-          <div class="rounded-full border border-emerald-400/40 bg-emerald-500/10 px-4 py-2 text-sm text-emerald-200">
-            Self-guided assessment
-          </div>
           <button
             class="rounded-full border border-white/10 bg-slate-800/70 px-4 py-2 text-sm text-slate-200 transition hover:border-emerald-400/50 hover:text-emerald-200"
             @click="emit('navigate', 'home')"
           >
-            Back to Home
+            ← Back to home
           </button>
         </div>
       </div>
     </header>
 
-    <main class="mx-auto grid max-w-6xl gap-6 px-6 py-10 lg:grid-cols-[2fr_1fr]">
+    <main class="page-container-6xl grid gap-6 py-4 lg:grid-cols-[2fr_1fr]">
       <section class="space-y-6">
-        <div class="rounded-3xl border border-white/10 bg-slate-900/70 p-6 shadow-lg shadow-slate-900/40">
+        <div class="page-section">
           <div class="flex flex-wrap items-start justify-between gap-4">
             <div>
               <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Pick ONE quiz to start</p>
@@ -31,7 +28,7 @@
                 Select a short assessment to capture how you are feeling today. You can run one at a time.
               </p>
             </div>
-            <div class="flex items-center gap-2 rounded-full bg-slate-800/70 px-3 py-1 text-xs text-slate-300">
+            <div class="pill-muted flex items-center gap-2">
               <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
               Ready to start
             </div>
@@ -55,17 +52,14 @@
           </div>
         </div>
 
-        <div
-          v-if="selectedQuiz"
-          class="rounded-3xl border border-white/10 bg-slate-900/70 p-6 shadow-lg shadow-slate-900/40"
-        >
+        <div v-if="selectedQuiz" class="page-section">
           <div class="flex flex-wrap items-start justify-between gap-4">
             <div>
               <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Selected quiz</p>
               <h3 class="text-2xl font-semibold text-white">{{ selectedQuiz.title }}</h3>
               <p class="mt-2 text-slate-300">{{ selectedQuiz.longDescription }}</p>
             </div>
-            <div class="rounded-2xl bg-slate-800/70 px-4 py-2 text-sm text-slate-200">
+            <div class="panel-item px-4 py-2 text-sm text-slate-200">
               {{ selectedQuiz.questions.length }} questions · {{ selectedQuiz.estimate }}
             </div>
           </div>
@@ -82,22 +76,19 @@
             >
               Clear Answers
             </button>
-            <div class="rounded-2xl bg-slate-800/70 px-4 py-3 text-xs uppercase tracking-[0.2em] text-slate-400">
+            <div class="panel-item px-4 py-3 text-xs uppercase tracking-[0.2em] text-slate-400">
               {{ progressText }}
             </div>
           </div>
         </div>
 
-        <div
-          v-if="selectedQuiz && inProgress"
-          class="rounded-3xl border border-white/10 bg-slate-900/70 p-6 shadow-lg shadow-slate-900/40"
-        >
+        <div v-if="selectedQuiz && inProgress" class="page-section">
           <div class="flex flex-wrap items-center justify-between gap-4">
             <div>
               <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Question {{ currentQuestionIndex + 1 }}</p>
               <h3 class="text-xl font-semibold text-white">{{ currentQuestion }}</h3>
             </div>
-            <span class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300">
+            <span class="pill-muted">
               {{ currentQuestionIndex + 1 }} of {{ selectedQuiz.questions.length }}
             </span>
           </div>
@@ -140,7 +131,7 @@
               <h3 class="text-2xl font-semibold text-white">Score: {{ totalScore }}</h3>
               <p class="mt-2 text-slate-300">{{ scoreMeaning?.detail }}</p>
             </div>
-            <div class="rounded-2xl bg-slate-900/70 px-4 py-3 text-sm text-emerald-100">
+            <div class="panel-item px-4 py-3 text-sm text-emerald-100">
               {{ scoreMeaning?.label }}
             </div>
           </div>
@@ -157,18 +148,18 @@
       </section>
 
       <aside class="space-y-6">
-        <div class="rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-900/60 to-emerald-500/10 p-6 shadow-lg shadow-slate-900/40">
+        <div class="page-section page-section--gradient-emerald">
           <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Simple commands</p>
           <div class="mt-5 space-y-4">
             <button
-              class="flex w-full items-center justify-between rounded-2xl border border-white/10 bg-slate-800/70 px-4 py-3 text-left text-sm font-medium text-white transition hover:border-emerald-400/50"
+              class="panel-item flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-white transition hover:border-emerald-400/50"
               @click="startQuiz"
             >
               <span>Start Quiz</span>
               <span class="text-lg">▶️</span>
             </button>
             <button
-              class="flex w-full items-center justify-between rounded-2xl border border-white/10 bg-slate-800/70 px-4 py-3 text-left text-sm font-medium text-white transition hover:border-emerald-400/50"
+              class="panel-item flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-white transition hover:border-emerald-400/50"
               :class="{ 'opacity-50': !inProgress }"
               :disabled="!inProgress"
               @click="nextQuestion"
@@ -177,7 +168,7 @@
               <span class="text-lg">➡️</span>
             </button>
             <button
-              class="flex w-full items-center justify-between rounded-2xl border border-white/10 bg-slate-800/70 px-4 py-3 text-left text-sm font-medium text-white transition hover:border-emerald-400/50"
+              class="panel-item flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-white transition hover:border-emerald-400/50"
               :class="{ 'opacity-50': !completed }"
               :disabled="!completed"
               @click="saveResult"
@@ -188,16 +179,16 @@
           </div>
         </div>
 
-        <div class="rounded-3xl border border-white/10 bg-slate-900/70 p-6 shadow-lg shadow-slate-900/40">
+        <div class="page-section">
           <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Session summary</p>
           <div class="mt-4 space-y-3">
-            <div class="rounded-2xl bg-slate-800/70 px-4 py-3">
+            <div class="panel-item px-4 py-3">
               <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Selected quiz</p>
               <p class="mt-2 text-sm font-medium text-white">
                 {{ selectedQuiz ? selectedQuiz.title : 'None yet' }}
               </p>
             </div>
-            <div class="rounded-2xl bg-slate-800/70 px-4 py-3">
+            <div class="panel-item px-4 py-3">
               <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Progress</p>
               <p class="mt-2 text-sm font-medium text-white">{{ progressText }}</p>
             </div>

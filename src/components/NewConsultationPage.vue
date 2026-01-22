@@ -1,13 +1,13 @@
 <template>
-  <div class="min-h-screen bg-slate-950 text-slate-100">
-    <header class="border-b border-white/10 bg-slate-900/60">
-      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-6">
+  <div class="app-shell">
+    <header class="page-header page-header--muted">
+      <div class="page-container-6xl flex flex-wrap items-center justify-between gap-4 py-6">
         <div>
           <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Mind Space</p>
           <h1 class="text-3xl font-semibold text-white">New Consultation Thread</h1>
         </div>
         <div class="flex items-center gap-3">
-          <div class="rounded-full border border-emerald-400/40 bg-emerald-500/10 px-4 py-2 text-sm text-emerald-200">
+          <div class="pill-emerald px-4 py-2 text-sm">
             Draft in progress
           </div>
           <button
@@ -20,9 +20,9 @@
       </div>
     </header>
 
-    <main class="mx-auto grid max-w-6xl gap-6 px-6 py-10 lg:grid-cols-[2fr_1fr]">
+    <main class="page-container-6xl grid gap-6 py-4 lg:grid-cols-[2fr_1fr]">
       <section class="space-y-6">
-        <div class="rounded-3xl border border-white/10 bg-slate-900/70 p-6 shadow-lg shadow-slate-900/40">
+        <div class="page-section">
           <div class="flex flex-wrap items-start justify-between gap-4">
             <div>
               <p class="text-sm uppercase tracking-[0.2em] text-slate-400">New consultation thread</p>
@@ -31,7 +31,7 @@
                 Share the story in your own words or choose a topic to guide the thread.
               </p>
             </div>
-            <div class="flex items-center gap-2 rounded-full bg-slate-800/70 px-3 py-1 text-xs text-slate-300">
+            <div class="pill-muted flex items-center gap-2">
               <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
               Drafting
             </div>
@@ -90,18 +90,18 @@
       </section>
 
       <aside class="space-y-6">
-        <div class="rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-900/60 to-emerald-500/10 p-6 shadow-lg shadow-slate-900/40">
+        <div class="page-section page-section--gradient-emerald">
           <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Simple commands</p>
           <div class="mt-5 space-y-4">
-            <div class="rounded-2xl border border-white/10 bg-slate-800/70 px-4 py-3">
+            <div class="panel-item px-4 py-3">
               <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Command</p>
               <p class="mt-2 text-sm font-medium text-white">Generate Example Phrases</p>
             </div>
-            <div class="rounded-2xl border border-white/10 bg-slate-800/70 px-4 py-3">
+            <div class="panel-item px-4 py-3">
               <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Command</p>
               <p class="mt-2 text-sm font-medium text-white">Post Thread</p>
             </div>
-            <div class="rounded-2xl border border-white/10 bg-slate-800/70 px-4 py-3">
+            <div class="panel-item px-4 py-3">
               <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Command</p>
               <p class="mt-2 text-sm font-medium text-white">Save Draft</p>
             </div>

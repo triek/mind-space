@@ -1,5 +1,5 @@
 <template>
-  <div class="relative min-h-screen bg-slate-950 text-slate-100">
+  <div class="app-shell app-shell--relative">
     <div class="pb-32">
       <component :is="activeComponent" @navigate="handleNavigate" />
     </div>
@@ -31,7 +31,7 @@ import CheckInQuizPage from './components/CheckInQuizPage.vue'
 import NewConsultationPage from './components/NewConsultationPage.vue'
 import ThreadDetailPage from './components/ThreadDetailPage.vue'
 import ProgressPage from './components/ProgressPage.vue'
-import SafetyPage from './components/SafetyPage.vue'
+import SafetyPage from './components/Urgent.vue'
 import ResourcesPage from './components/ResourcesPage.vue'
 
 const activePage = ref('home')

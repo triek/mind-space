@@ -1,5 +1,75 @@
 @import "tailwindcss";
 
+@layer components {
+  .app-shell {
+    @apply min-h-screen bg-slate-950 text-slate-100;
+  }
+
+  .app-shell--relative {
+    @apply relative;
+  }
+
+  .page-header {
+    @apply border-b border-white/10;
+  }
+
+  .page-header--glass {
+    @apply bg-slate-900/70 backdrop-blur;
+  }
+
+  .page-header--muted {
+    @apply bg-slate-900/60 px-4;
+  }
+
+  .page-container-5xl {
+    @apply mx-auto max-w-5xl px-4;
+  }
+
+  .page-container-6xl {
+    @apply mx-auto max-w-6xl px-4;
+  }
+
+  .page-section {
+    @apply rounded-3xl border border-white/10 bg-slate-900/70 p-4 shadow-lg shadow-slate-900/40;
+  }
+
+  .page-section--gradient-indigo {
+    @apply bg-gradient-to-br from-slate-900 via-slate-900/60 to-indigo-500/10;
+  }
+
+  .page-section--gradient-emerald {
+    @apply bg-gradient-to-br from-slate-900 via-slate-900/60 to-emerald-500/10;
+  }
+
+  .page-section--gradient-emerald-strong {
+    @apply bg-gradient-to-br from-slate-900 via-slate-900/70 to-emerald-500/10;
+  }
+
+  .page-section--gradient-amber {
+    @apply bg-gradient-to-br from-slate-900 via-slate-900/60 to-amber-500/10;
+  }
+
+  .page-section--gradient-rose {
+    @apply bg-gradient-to-br from-slate-900 via-slate-900/60 to-rose-500/10;
+  }
+
+  .pill-muted {
+    @apply rounded-full bg-slate-800/70 px-3 py-1 text-xs text-slate-300;
+  }
+
+  .pill-muted--bordered {
+    @apply rounded-full border border-white/10 bg-slate-800/70 px-3 py-1 text-xs text-slate-300;
+  }
+
+  .pill-emerald {
+    @apply rounded-full border border-emerald-400/40 bg-emerald-500/10 text-emerald-200;
+  }
+
+  .panel-item {
+    @apply rounded-2xl border border-white/10 bg-slate-800/70;
+  }
+}
+
 :root {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.5;
