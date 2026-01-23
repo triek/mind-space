@@ -3,11 +3,11 @@
     <header class="page-header page-header--muted sticky top-0 z-50">
       <div class="page-container-6xl page-header__layout">
         <div>
-          <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Mind Space</p>
-          <h1 class="text-3xl font-semibold text-white">Progress Page</h1>
+          <p class="page-kicker">Mind Space</p>
+          <h1 class="page-title">Progress Page</h1>
         </div>
         <button
-          class="rounded-full border border-white/10 bg-slate-800/70 px-4 py-2 text-sm text-slate-200 transition hover:border-emerald-400/50 hover:text-emerald-100"
+          class="rounded-full border border-white/10 bg-slate-800/70 px-4 py-2 text-sm text-soft transition hover:border-emerald-400/50 hover-text-success-strong"
           @click="emit('navigate', 'home')"
         >
           ← Back to home
@@ -20,8 +20,8 @@
         <div class="page-section">
           <div class="flex flex-wrap items-center justify-between gap-3">
             <div>
-              <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Score trends</p>
-              <h2 class="text-2xl font-semibold text-white">Past scores over time</h2>
+              <p class="section-label">Score trends</p>
+              <h2 class="section-title">Past scores over time</h2>
             </div>
             <div class="pill-muted--bordered flex items-center gap-2">
               <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
@@ -37,13 +37,13 @@
             >
               <div class="flex flex-wrap items-center justify-between gap-2">
                 <div>
-                  <p class="text-xs uppercase tracking-[0.2em] text-slate-400">{{ score.type }}</p>
-                  <p class="text-sm font-medium text-white">{{ score.label }}</p>
+                  <p class="meta-label">{{ score.type }}</p>
+                  <p class="panel-value">{{ score.label }}</p>
                 </div>
-                <p class="text-xs text-slate-400">{{ score.date }}</p>
+                <p class="text-caption">{{ score.date }}</p>
               </div>
               <div class="mt-4">
-                <div class="flex items-center justify-between text-xs text-slate-400">
+                <div class="flex items-center justify-between text-caption">
                   <span>Score</span>
                   <span>{{ score.score }}/27</span>
                 </div>
@@ -56,7 +56,7 @@
               </div>
             </div>
           </div>
-          <p v-else class="mt-6 text-sm text-slate-400">
+          <p v-else class="mt-6 text-sm text-subtle">
             Demo data cleared. Add a new check-in to see scores.
           </p>
         </div>
@@ -64,8 +64,8 @@
         <div class="page-section">
           <div class="flex items-center justify-between">
             <div>
-              <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Mood history list</p>
-              <h2 class="text-2xl font-semibold text-white">Recent check-ins</h2>
+              <p class="section-label">Mood history list</p>
+              <h2 class="section-title">Recent check-ins</h2>
             </div>
             <span class="pill-muted">Last 14 days</span>
           </div>
@@ -77,13 +77,13 @@
               class="panel-item flex items-center justify-between px-4 py-3"
             >
               <div>
-                <p class="text-sm font-medium text-white">{{ mood.label }}</p>
-                <p class="text-xs text-slate-400">{{ mood.note }}</p>
+                <p class="panel-value">{{ mood.label }}</p>
+                <p class="text-caption">{{ mood.note }}</p>
               </div>
-              <span class="text-xs text-slate-400">{{ mood.date }}</span>
+              <span class="text-caption">{{ mood.date }}</span>
             </li>
           </ul>
-          <p v-else class="mt-6 text-sm text-slate-400">
+          <p v-else class="mt-6 text-sm text-subtle">
             Mood history cleared. Add a new mood check to populate this list.
           </p>
         </div>
@@ -91,16 +91,16 @@
 
       <aside class="space-y-6">
         <div class="page-section">
-          <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Simple commands</p>
+          <p class="section-label">Simple commands</p>
           <div class="mt-5 space-y-4">
             <div class="panel-item px-4 py-3">
-              <label class="text-xs uppercase tracking-[0.2em] text-slate-400" for="quizFilter">
+              <label class="meta-label" for="quizFilter">
                 Filter by quiz type
               </label>
               <select
                 id="quizFilter"
                 v-model="activeFilter"
-                class="mt-2 w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-2 text-sm text-white"
+                class="mt-2 w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-2 text-sm text-primary"
               >
                 <option value="all">All quiz types</option>
                 <option v-for="type in quizTypes" :key="type" :value="type">{{ type }}</option>
@@ -108,7 +108,7 @@
             </div>
 
             <button
-              class="panel-item flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-white transition hover:border-sky-400/50 hover:text-sky-200"
+              class="panel-item flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-primary transition hover:border-sky-400/50 hover-text-info"
               @click="toggleLast7Days"
             >
               <span>View last 7 days</span>
@@ -116,7 +116,7 @@
             </button>
 
             <button
-              class="flex w-full items-center justify-between rounded-2xl border border-rose-400/30 bg-rose-500/10 px-4 py-3 text-left text-sm font-medium text-rose-100 transition hover:border-rose-400/60"
+              class="flex w-full items-center justify-between rounded-2xl border border-rose-400/30 bg-rose-500/10 px-4 py-3 text-left text-sm font-medium text-danger transition hover:border-rose-400/60"
               @click="clearDemoData"
             >
               <span>Clear demo data</span>
@@ -126,8 +126,8 @@
         </div>
 
         <div class="page-section page-section--gradient-emerald">
-          <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Insights</p>
-          <div class="mt-4 space-y-3 text-sm text-slate-300">
+          <p class="section-label">Insights</p>
+          <div class="mt-4 space-y-3 text-sm text-muted">
             <p>
               Track progress week over week and review patterns that influence your well-being.
             </p>

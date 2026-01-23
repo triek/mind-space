@@ -3,12 +3,12 @@
     <header class="page-header page-header--muted sticky top-0 z-50">
       <div class="page-container-6xl page-header__layout">
         <div>
-          <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Mind Space</p>
-          <h1 class="text-3xl font-semibold text-white">Assessment</h1>
+          <p class="page-kicker">Mind Space</p>
+          <h1 class="page-title">Assessment</h1>
         </div>
         <div class="flex items-center gap-3">
           <button
-            class="rounded-full border border-white/10 bg-slate-800/70 px-4 py-2 text-sm text-slate-200 transition hover:border-emerald-400/50 hover:text-emerald-200"
+            class="rounded-full border border-white/10 bg-slate-800/70 px-4 py-2 text-sm text-soft transition hover:border-emerald-400/50 hover-text-success"
             @click="emit('navigate', 'home')"
           >
             ← Back to home
@@ -22,9 +22,9 @@
         <div class="page-section">
           <div class="flex flex-wrap items-start justify-between gap-4">
             <div>
-              <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Pick ONE quiz to start</p>
-              <h2 class="text-2xl font-semibold text-white">Choose your check-in</h2>
-              <p class="mt-2 text-slate-300">
+              <p class="section-label">Pick ONE quiz to start</p>
+              <h2 class="section-title">Choose your check-in</h2>
+              <p class="text-body-tight">
                 Select a short assessment to capture how you are feeling today. You can run one at a time.
               </p>
             </div>
@@ -40,14 +40,14 @@
               class="rounded-2xl border px-4 py-3 text-left text-sm font-medium transition"
               :class="
                 selectedQuizId === quiz.id
-                  ? 'border-emerald-400/60 bg-emerald-500/10 text-emerald-100'
-                  : 'border-white/10 bg-slate-800/80 text-white hover:border-emerald-400/50 hover:text-emerald-200'
+                  ? 'border-emerald-400/60 bg-emerald-500/10 text-success-strong'
+                  : 'border-white/10 bg-slate-800/80 text-primary hover:border-emerald-400/50 hover-text-success'
               "
               @click="selectQuiz(quiz.id)"
             >
-              <p class="text-xs uppercase tracking-[0.2em] text-slate-400">{{ quiz.label }}</p>
+              <p class="meta-label">{{ quiz.label }}</p>
               <p class="mt-2 text-lg font-semibold">{{ quiz.title }}</p>
-              <p class="mt-2 text-xs text-slate-300">{{ quiz.description }}</p>
+              <p class="mt-2 text-xs text-muted">{{ quiz.description }}</p>
             </button>
           </div>
         </div>
@@ -55,28 +55,28 @@
         <div v-if="selectedQuiz" class="page-section">
           <div class="flex flex-wrap items-start justify-between gap-4">
             <div>
-              <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Selected quiz</p>
-              <h3 class="text-2xl font-semibold text-white">{{ selectedQuiz.title }}</h3>
-              <p class="mt-2 text-slate-300">{{ selectedQuiz.longDescription }}</p>
+              <p class="section-label">Selected quiz</p>
+              <h3 class="section-title">{{ selectedQuiz.title }}</h3>
+              <p class="text-body-tight">{{ selectedQuiz.longDescription }}</p>
             </div>
-            <div class="panel-item px-4 py-2 text-sm text-slate-200">
+            <div class="panel-item px-4 py-2 text-sm text-soft">
               {{ selectedQuiz.questions.length }} questions · {{ selectedQuiz.estimate }}
             </div>
           </div>
           <div class="mt-6 flex flex-wrap items-center gap-3">
             <button
-              class="rounded-2xl border border-emerald-400/40 bg-emerald-500/10 px-5 py-3 text-sm font-medium text-emerald-100 transition hover:border-emerald-300 hover:bg-emerald-500/20"
+              class="rounded-2xl border border-emerald-400/40 bg-emerald-500/10 px-5 py-3 text-sm font-medium text-success-strong transition hover:border-emerald-300 hover:bg-emerald-500/20"
               @click="startQuiz"
             >
               Start Quiz
             </button>
             <button
-              class="rounded-2xl border border-white/10 bg-slate-800/70 px-5 py-3 text-sm font-medium text-white transition hover:border-slate-500/60"
+              class="rounded-2xl border border-white/10 bg-slate-800/70 px-5 py-3 text-sm font-medium text-primary transition hover:border-slate-500/60"
               @click="resetQuiz"
             >
               Clear Answers
             </button>
-            <div class="panel-item px-4 py-3 text-xs uppercase tracking-[0.2em] text-slate-400">
+            <div class="panel-item px-4 py-3 meta-label">
               {{ progressText }}
             </div>
           </div>
@@ -85,8 +85,8 @@
         <div v-if="selectedQuiz && inProgress" class="page-section">
           <div class="flex flex-wrap items-center justify-between gap-4">
             <div>
-              <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Question {{ currentQuestionIndex + 1 }}</p>
-              <h3 class="text-xl font-semibold text-white">{{ currentQuestion }}</h3>
+              <p class="section-label">Question {{ currentQuestionIndex + 1 }}</p>
+              <h3 class="panel-title">{{ currentQuestion }}</h3>
             </div>
             <span class="pill-muted">
               {{ currentQuestionIndex + 1 }} of {{ selectedQuiz.questions.length }}
@@ -105,15 +105,15 @@
                 :value="option.value"
               />
               <div>
-                <p class="font-medium text-white">{{ option.label }}</p>
-                <p class="text-xs text-slate-400">{{ option.description }}</p>
+                <p class="font-medium text-primary">{{ option.label }}</p>
+                <p class="text-caption">{{ option.description }}</p>
               </div>
             </label>
           </div>
           <div class="mt-6 flex flex-wrap items-center justify-between gap-3">
-            <p class="text-xs uppercase tracking-[0.2em] text-slate-500">Next up: {{ nextQuestionPreview }}</p>
+            <p class="meta-label-faint">Next up: {{ nextQuestionPreview }}</p>
             <button
-              class="rounded-2xl border border-emerald-400/40 bg-emerald-500/10 px-5 py-3 text-sm font-medium text-emerald-100 transition hover:border-emerald-300 hover:bg-emerald-500/20"
+              class="rounded-2xl border border-emerald-400/40 bg-emerald-500/10 px-5 py-3 text-sm font-medium text-success-strong transition hover:border-emerald-300 hover:bg-emerald-500/20"
               @click="nextQuestion"
             >
               Next Question
@@ -127,39 +127,39 @@
         >
           <div class="flex flex-wrap items-start justify-between gap-4">
             <div>
-              <p class="text-sm uppercase tracking-[0.2em] text-emerald-200">Result</p>
-              <h3 class="text-2xl font-semibold text-white">Score: {{ totalScore }}</h3>
-              <p class="mt-2 text-slate-300">{{ scoreMeaning?.detail }}</p>
+              <p class="section-label text-success">Result</p>
+              <h3 class="section-title">Score: {{ totalScore }}</h3>
+              <p class="text-body-tight">{{ scoreMeaning?.detail }}</p>
             </div>
-            <div class="panel-item px-4 py-3 text-sm text-emerald-100">
+            <div class="panel-item px-4 py-3 text-sm text-success-strong">
               {{ scoreMeaning?.label }}
             </div>
           </div>
           <div class="mt-6 flex flex-wrap items-center gap-3">
             <button
-              class="rounded-2xl border border-emerald-400/40 bg-emerald-500/10 px-5 py-3 text-sm font-medium text-emerald-100 transition hover:border-emerald-300 hover:bg-emerald-500/20"
+              class="rounded-2xl border border-emerald-400/40 bg-emerald-500/10 px-5 py-3 text-sm font-medium text-success-strong transition hover:border-emerald-300 hover:bg-emerald-500/20"
               @click="saveResult"
             >
               Save Result
             </button>
-            <p v-if="savedSummary" class="text-sm text-emerald-200">{{ savedSummary }}</p>
+            <p v-if="savedSummary" class="text-sm text-success">{{ savedSummary }}</p>
           </div>
         </div>
       </section>
 
       <aside class="space-y-6">
         <div class="page-section page-section--gradient-emerald">
-          <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Simple commands</p>
+          <p class="section-label">Simple commands</p>
           <div class="mt-5 space-y-4">
             <button
-              class="panel-item flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-white transition hover:border-emerald-400/50"
+              class="panel-item flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-primary transition hover:border-emerald-400/50"
               @click="startQuiz"
             >
               <span>Start Quiz</span>
               <span class="text-lg">▶️</span>
             </button>
             <button
-              class="panel-item flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-white transition hover:border-emerald-400/50"
+              class="panel-item flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-primary transition hover:border-emerald-400/50"
               :class="{ 'opacity-50': !inProgress }"
               :disabled="!inProgress"
               @click="nextQuestion"
@@ -168,7 +168,7 @@
               <span class="text-lg">➡️</span>
             </button>
             <button
-              class="panel-item flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-white transition hover:border-emerald-400/50"
+              class="panel-item flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-primary transition hover:border-emerald-400/50"
               :class="{ 'opacity-50': !completed }"
               :disabled="!completed"
               @click="saveResult"
@@ -180,21 +180,21 @@
         </div>
 
         <div class="page-section">
-          <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Session summary</p>
+          <p class="section-label">Session summary</p>
           <div class="mt-4 space-y-3">
             <div class="panel-item px-4 py-3">
-              <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Selected quiz</p>
-              <p class="mt-2 text-sm font-medium text-white">
+              <p class="meta-label">Selected quiz</p>
+              <p class="mt-2 panel-value">
                 {{ selectedQuiz ? selectedQuiz.title : 'None yet' }}
               </p>
             </div>
             <div class="panel-item px-4 py-3">
-              <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Progress</p>
-              <p class="mt-2 text-sm font-medium text-white">{{ progressText }}</p>
+              <p class="meta-label">Progress</p>
+              <p class="mt-2 panel-value">{{ progressText }}</p>
             </div>
             <div class="rounded-2xl bg-slate-800/70 px-4 py-3">
-              <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Latest score</p>
-              <p class="mt-2 text-sm font-medium text-white">
+              <p class="meta-label">Latest score</p>
+              <p class="mt-2 panel-value">
                 {{ completed ? totalScore : 'Complete the quiz to see a score' }}
               </p>
             </div>

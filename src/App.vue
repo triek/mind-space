@@ -10,7 +10,7 @@
       <button
         v-for="item in navItems"
         :key="item.page"
-        class="flex h-14 w-14 items-center justify-center rounded-full text-xl text-white transition"
+        class="flex h-14 w-14 items-center justify-center rounded-full text-xl text-primary transition"
         :class="[
           item.color,
           activeNav === item.page ? 'ring-2 ring-white/70 ring-offset-2 ring-offset-slate-900' : 'opacity-80 hover:opacity-100'

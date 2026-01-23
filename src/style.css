@@ -68,6 +68,142 @@
   .panel-item {
     @apply rounded-2xl border border-white/10 bg-slate-800/70;
   }
+
+  .text-primary {
+    @apply text-white;
+  }
+
+  .text-soft {
+    @apply text-slate-200;
+  }
+
+  .text-contrast {
+    @apply text-slate-100;
+  }
+
+  .text-muted {
+    @apply text-slate-300;
+  }
+
+  .text-subtle {
+    @apply text-slate-400;
+  }
+
+  .text-faint {
+    @apply text-slate-500;
+  }
+
+  .text-success {
+    @apply text-emerald-200;
+  }
+
+  .text-success-strong {
+    @apply text-emerald-100;
+  }
+
+  .text-info {
+    @apply text-sky-100;
+  }
+
+  .text-warning {
+    @apply text-amber-100;
+  }
+
+  .text-danger {
+    @apply text-rose-100;
+  }
+
+  .text-danger-strong {
+    @apply text-rose-200;
+  }
+
+  .hover-text-success {
+    @apply hover:text-emerald-200;
+  }
+
+  .hover-text-success-strong {
+    @apply hover:text-emerald-100;
+  }
+
+  .hover-text-info {
+    @apply hover:text-sky-200;
+  }
+
+  .hover-text-warning-soft {
+    @apply hover:text-amber-200;
+  }
+
+  .hover-text-warning {
+    @apply hover:text-amber-100;
+  }
+
+  .hover-text-danger-soft {
+    @apply hover:text-rose-200;
+  }
+
+  .hover-text-danger {
+    @apply hover:text-rose-100;
+  }
+
+  .placeholder-faint {
+    @apply placeholder:text-slate-500;
+  }
+
+  .page-title {
+    @apply text-3xl font-semibold text-white;
+  }
+
+  .section-title {
+    @apply text-2xl font-semibold text-white;
+  }
+
+  .panel-title {
+    @apply text-xl font-semibold text-white;
+  }
+
+  .page-kicker {
+    @apply text-sm uppercase tracking-[0.3em] text-slate-400;
+  }
+
+  .section-label {
+    @apply text-sm uppercase tracking-[0.2em] text-slate-400;
+  }
+
+  .meta-label {
+    @apply text-xs uppercase tracking-[0.2em] text-slate-400;
+  }
+
+  .meta-label-faint {
+    @apply text-xs uppercase tracking-[0.2em] text-slate-500;
+  }
+
+  .text-body {
+    @apply text-sm text-slate-300;
+  }
+
+  .text-body-tight {
+    @apply mt-2 text-sm text-slate-300;
+  }
+
+  .text-body-relaxed {
+    @apply mt-3 text-sm text-slate-300;
+  }
+
+  .text-caption {
+    @apply text-xs text-slate-400;
+  }
+
+  .panel-value {
+    @apply text-sm font-medium text-white;
+  }
+
+  .panel-value-soft {
+    @apply text-sm font-medium text-slate-200;
+  }
+
+  .panel-note {
+    @apply text-xs text-slate-400;
+  }
 }
 
 :root {

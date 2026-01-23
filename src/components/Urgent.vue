@@ -3,11 +3,11 @@
     <header class="page-header page-header--muted sticky top-0 z-50">
       <div class="page-container-6xl page-header__layout">
         <div>
-          <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Mind Space</p>
-          <h1 class="text-3xl font-semibold text-white">Urgent Help</h1>
+          <p class="page-kicker">Mind Space</p>
+          <h1 class="page-title">Urgent Help</h1>
         </div>
         <button
-          class="rounded-full border border-white/10 bg-slate-800/70 px-4 py-2 text-sm text-slate-200 transition hover:border-emerald-400/50 hover:text-emerald-100"
+          class="rounded-full border border-white/10 bg-slate-800/70 px-4 py-2 text-sm text-soft transition hover:border-emerald-400/50 hover-text-success-strong"
           @click="emit('navigate', 'home')"
         >
           ← Back to home
@@ -18,12 +18,12 @@
     <main class="page-container-6xl py-4 grid gap-4 lg:grid-cols-[2fr_1fr]">
       <section class="space-y-4">
         <div class="rounded-3xl border border-rose-500/40 bg-rose-500/10 p-6 shadow-lg shadow-slate-900/40">
-          <p class="text-sm uppercase tracking-[0.2em] text-rose-200">Immediate support</p>
-          <h2 class="mt-2 text-2xl font-semibold text-white">You are not alone</h2>
-          <p class="mt-3 text-sm leading-relaxed text-slate-200">
+          <p class="section-label text-danger-strong">Immediate support</p>
+          <h2 class="mt-2 section-title">You are not alone</h2>
+          <p class="text-body-relaxed leading-relaxed text-soft">
             Reach out to trusted people, professionals, or local crisis lines for real-time support.
           </p>
-          <div class="mt-5 rounded-2xl border border-white/10 bg-slate-900/70 p-4 text-sm text-slate-200">
+          <div class="mt-5 rounded-2xl border border-white/10 bg-slate-900/70 p-4 text-sm text-soft">
             Crisis links placeholder
           </div>
         </div>
@@ -31,12 +31,12 @@
         <div class="page-section">
           <div class="flex flex-wrap items-center justify-between gap-3">
             <div>
-              <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Support options</p>
-              <h2 class="text-2xl font-semibold text-white">Ways to get help now</h2>
+              <p class="section-label">Support options</p>
+              <h2 class="section-title">Ways to get help now</h2>
             </div>
             <span class="pill-muted">24/7</span>
           </div>
-          <ul class="mt-6 space-y-4 text-sm text-slate-300">
+          <ul class="mt-6 space-y-4 text-sm text-muted">
             <li class="panel-item px-4 py-3">
               Share your location with someone you trust and stay connected while you wait for help.
             </li>
@@ -52,15 +52,15 @@
 
       <aside class="space-y-6">
         <div class="page-section page-section--gradient-rose">
-          <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Simple commands</p>
+          <p class="section-label">Simple commands</p>
           <div class="mt-5 space-y-4">
             <button
-              class="panel-item w-full px-4 py-3 text-left text-sm font-medium text-white transition hover:border-rose-400/70 hover:text-rose-100"
+              class="panel-item w-full px-4 py-3 text-left text-sm font-medium text-primary transition hover:border-rose-400/70 hover-text-danger"
             >
               Open Safety Help
             </button>
             <button
-              class="panel-item w-full px-4 py-3 text-left text-sm font-medium text-white transition hover:border-rose-400/70 hover:text-rose-100"
+              class="panel-item w-full px-4 py-3 text-left text-sm font-medium text-primary transition hover:border-rose-400/70 hover-text-danger"
             >
               View support options
             </button>
@@ -68,8 +68,8 @@
         </div>
 
         <div class="page-section">
-          <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Reminder</p>
-          <p class="mt-3 text-sm text-slate-300">
+          <p class="section-label">Reminder</p>
+          <p class="text-body-relaxed">
             Keep this page bookmarked so it is easy to reach from any screen.
           </p>
         </div>
