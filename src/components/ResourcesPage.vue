@@ -3,11 +3,11 @@
     <header class="page-header page-header--muted sticky top-0 z-50">
       <div class="page-container-6xl page-header__layout">
         <div>
-          <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Mind Space</p>
-          <h1 class="text-3xl font-semibold text-white">Resources</h1>
+          <p class="page-kicker">Mind Space</p>
+          <h1 class="page-title">Resources</h1>
         </div>
         <button
-          class="rounded-full border border-white/10 bg-slate-800/70 px-4 py-2 text-sm text-slate-200 transition hover:border-amber-300/60 hover:text-amber-100"
+          class="rounded-full border border-white/10 bg-slate-800/70 px-4 py-2 text-sm text-soft transition hover:border-amber-300/60 hover-text-warning"
           @click="emit('navigate', 'home')"
         >
           ← Back to home
@@ -19,36 +19,36 @@
       <section class="page-section">
         <div class="flex flex-wrap items-center justify-between gap-3">
           <div>
-            <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Quick reset</p>
-            <h2 class="text-2xl font-semibold text-white">Grounding exercises</h2>
+            <p class="section-label">Quick reset</p>
+            <h2 class="section-title">Grounding exercises</h2>
           </div>
           <span class="pill-muted">5 minutes</span>
         </div>
-        <div class="mt-6 grid gap-3 sm:grid-cols-2">
-          <div class="panel-item p-4 text-sm text-slate-200">
-            4-7-8 breathing with a slow count and a longer exhale.
+          <div class="mt-6 grid gap-3 sm:grid-cols-2">
+            <div class="panel-item p-4 text-sm text-soft">
+              4-7-8 breathing with a slow count and a longer exhale.
+            </div>
+            <div class="panel-item p-4 text-sm text-soft">
+              5-4-3-2-1 check: name what you can sense around you.
+            </div>
+            <div class="panel-item p-4 text-sm text-soft">
+              Gentle stretch sequence to release neck and shoulder tension.
+            </div>
+            <div class="panel-item p-4 text-sm text-soft">
+              Write down three supportive phrases you want to remember today.
+            </div>
           </div>
-          <div class="panel-item p-4 text-sm text-slate-200">
-            5-4-3-2-1 check: name what you can sense around you.
-          </div>
-          <div class="panel-item p-4 text-sm text-slate-200">
-            Gentle stretch sequence to release neck and shoulder tension.
-          </div>
-          <div class="panel-item p-4 text-sm text-slate-200">
-            Write down three supportive phrases you want to remember today.
-          </div>
-        </div>
-      </section>
+        </section>
 
       <section class="page-section">
         <div class="flex flex-wrap items-center justify-between gap-3">
           <div>
-            <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Self-guided tools</p>
-            <h2 class="text-2xl font-semibold text-white">Skill library</h2>
+            <p class="section-label">Self-guided tools</p>
+            <h2 class="section-title">Skill library</h2>
           </div>
           <span class="pill-muted">Updated weekly</span>
         </div>
-        <ul class="mt-6 space-y-3 text-sm text-slate-300">
+        <ul class="mt-6 space-y-3 text-sm text-muted">
           <li class="panel-item px-4 py-3">
             Thought reframing worksheet for shifting unhelpful patterns.
           </li>
@@ -65,9 +65,9 @@
       </section>
 
       <section class="page-section page-section--gradient-amber">
-        <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Community support</p>
-        <h2 class="mt-2 text-2xl font-semibold text-white">Connect with guided resources</h2>
-        <p class="mt-3 text-sm text-slate-300">
+        <p class="section-label">Community support</p>
+        <h2 class="mt-2 section-title">Connect with guided resources</h2>
+        <p class="text-body-relaxed">
           Explore curated podcasts, booklists, and local directories to find ongoing support.
         </p>
       </section>
