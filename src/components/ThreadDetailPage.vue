@@ -7,7 +7,7 @@
           <h1 class="page-title">Thread Detail</h1>
         </div>
         <button
-          class="rounded-full border border-white/10 bg-slate-800/80 px-4 py-2 text-sm text-soft transition hover:border-emerald-400/50 hover-text-success"
+          class="button-pill button-pill--success bg-slate-800/80"
           @click="emit('navigate', 'home')"
         >
           Back to dashboard
@@ -63,7 +63,7 @@
           <div class="mt-4 space-y-4">
             <textarea
               rows="4"
-              class="w-full rounded-2xl border border-white/10 bg-slate-950/80 px-4 py-3 text-sm text-contrast placeholder-faint focus:border-emerald-400/60 focus:outline-none"
+              class="textarea-base bg-slate-950/80"
               placeholder="Write your next message to your counselor..."
             ></textarea>
             <div class="flex flex-wrap items-center justify-between gap-3">
@@ -82,15 +82,15 @@
         <div class="page-section page-section--gradient-emerald-strong">
           <p class="section-label">Simple commands</p>
           <div class="mt-5 space-y-4">
-            <button class="panel-item flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-primary transition hover:border-emerald-400/60 hover-text-success">
+            <button class="panel-action hover:border-emerald-400/60 hover-text-success">
               <span>Send Message</span>
               <span class="text-lg">↗</span>
             </button>
-            <button class="panel-item flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-primary transition hover:border-emerald-400/60 hover-text-success">
+            <button class="panel-action hover:border-emerald-400/60 hover-text-success">
               <span>Mark As Helpful</span>
               <span class="text-lg">★</span>
             </button>
-            <button class="panel-item flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-primary transition hover:border-emerald-400/60 hover-text-success">
+            <button class="panel-action hover:border-emerald-400/60 hover-text-success">
               <span>Attach Resource</span>
               <span class="text-lg">＋</span>
             </button>

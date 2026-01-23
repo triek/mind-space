@@ -25,16 +25,16 @@
         </div>
 
         <div class="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-          <button class="rounded-2xl border border-white/10 bg-slate-800/80 px-4 py-3 text-sm font-medium text-primary transition hover:border-emerald-400/60 hover-text-success">
+          <button class="button-card hover:border-emerald-400/60 hover-text-success">
             🌤️ Calm
           </button>
-          <button class="rounded-2xl border border-white/10 bg-slate-800/80 px-4 py-3 text-sm font-medium text-primary transition hover:border-amber-400/60 hover-text-warning-soft">
+          <button class="button-card hover:border-amber-400/60 hover-text-warning-soft">
             🌿 Steady
           </button>
-          <button class="rounded-2xl border border-white/10 bg-slate-800/80 px-4 py-3 text-sm font-medium text-primary transition hover:border-sky-400/60 hover-text-info">
+          <button class="button-card hover:border-sky-400/60 hover-text-info">
             💭 Reflective
           </button>
-          <button class="rounded-2xl border border-white/10 bg-slate-800/80 px-4 py-3 text-sm font-medium text-primary transition hover:border-rose-400/60 hover-text-danger-soft">
+          <button class="button-card hover:border-rose-400/60 hover-text-danger-soft">
             🌧️ Overwhelmed
           </button>
         </div>
@@ -88,14 +88,14 @@
         <p class="section-label">Quick actions</p>
         <div class="mt-4 grid gap-3 sm:grid-cols-2">
           <button
-            class="flex items-center justify-between rounded-2xl bg-emerald-500/20 px-4 py-3 text-left text-sm font-medium text-success-strong transition hover:bg-emerald-500/30"
+            class="button-quick bg-emerald-500/20 text-success-strong hover:bg-emerald-500/30"
             @click="emit('navigate', 'assessment')"
           >
             <span>Start an assessment</span>
             <span class="text-lg">📝</span>
           </button>
           <button
-            class="flex items-center justify-between rounded-2xl bg-violet-500/20 px-4 py-3 text-left text-sm font-medium text-primary transition hover:bg-violet-500/30"
+            class="button-quick bg-violet-500/20 text-primary hover:bg-violet-500/30"
             @click="emit('navigate', 'progress')"
           >
             <span>Review progress</span>
