@@ -10,10 +10,10 @@
       <button
         v-for="item in navItems"
         :key="item.page"
-        class="flex h-14 w-14 items-center justify-center rounded-full text-xl text-primary transition"
+        class="nav-button"
         :class="[
           item.color,
-          activeNav === item.page ? 'ring-2 ring-white/70 ring-offset-2 ring-offset-slate-900' : 'opacity-80 hover:opacity-100'
+          activeNav === item.page ? 'nav-button--active' : 'nav-button--inactive'
         ]"
         :aria-label="item.label"
         @click="handleNavigate(item.page)"
@@ -65,11 +65,11 @@ const activeComponent = computed(() => {
 })
 
 const navItems = [
-  { page: 'home', label: 'Mood check', icon: '🏠', color: 'bg-emerald-500/90' },
-  { page: 'assessment', label: 'Assessment', icon: '📝', color: 'bg-sky-500/90' },
-  { page: 'progress', label: 'Progress', icon: '📈', color: 'bg-violet-500/90' },
-  { page: 'resources', label: 'Resources', icon: '📚', color: 'bg-amber-500/90' },
-  { page: 'safety', label: 'Urgent help', icon: '🆘', color: 'bg-rose-500/90' },
+  { page: 'home', label: 'Mood check', icon: '🏠', color: 'nav-button--emerald' },
+  { page: 'assessment', label: 'Assessment', icon: '📝', color: 'nav-button--sky' },
+  { page: 'progress', label: 'Progress', icon: '📈', color: 'nav-button--violet' },
+  { page: 'resources', label: 'Resources', icon: '📚', color: 'nav-button--amber' },
+  { page: 'safety', label: 'Urgent help', icon: '🆘', color: 'nav-button--rose' },
 ]
 
 const activeNav = computed(() => {

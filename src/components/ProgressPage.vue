@@ -7,7 +7,7 @@
           <h1 class="page-title">Progress Page</h1>
         </div>
         <button
-          class="button-pill button-pill--success-strong bg-slate-800/70"
+          class="button-pill button-pill--success-strong button-pill--surface"
           @click="emit('navigate', 'home')"
         >
           ← Back to home
@@ -108,7 +108,7 @@
             </div>
 
             <button
-              class="panel-action hover:border-sky-400/50 hover-text-info"
+              class="panel-action panel-action--info"
               @click="toggleLast7Days"
             >
               <span>View last 7 days</span>
@@ -116,7 +116,7 @@
             </button>
 
             <button
-              class="flex w-full items-center justify-between rounded-2xl border border-rose-400/30 bg-rose-500/10 px-4 py-3 text-left text-sm font-medium text-danger transition hover:border-rose-400/60"
+              class="panel-action panel-action--danger"
               @click="clearDemoData"
             >
               <span>Clear demo data</span>

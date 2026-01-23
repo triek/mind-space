@@ -7,7 +7,7 @@
           <h1 class="page-title">Thread Detail</h1>
         </div>
         <button
-          class="button-pill button-pill--success bg-slate-800/80"
+          class="button-pill button-pill--success button-pill--surface-strong"
           @click="emit('navigate', 'home')"
         >
           Back to dashboard
@@ -68,7 +68,7 @@
             ></textarea>
             <div class="flex flex-wrap items-center justify-between gap-3">
               <button
-                class="rounded-full border border-emerald-400/40 bg-emerald-500/10 px-4 py-2 text-sm font-medium text-success transition hover:bg-emerald-500/20"
+                class="button-outline-emerald"
               >
                 Add resource link
               </button>
@@ -82,15 +82,15 @@
         <div class="page-section page-section--gradient-emerald-strong">
           <p class="section-label">Simple commands</p>
           <div class="mt-5 space-y-4">
-            <button class="panel-action hover:border-emerald-400/60 hover-text-success">
+            <button class="panel-action panel-action--emerald-strong">
               <span>Send Message</span>
               <span class="text-lg">↗</span>
             </button>
-            <button class="panel-action hover:border-emerald-400/60 hover-text-success">
+            <button class="panel-action panel-action--emerald-strong">
               <span>Mark As Helpful</span>
               <span class="text-lg">★</span>
             </button>
-            <button class="panel-action hover:border-emerald-400/60 hover-text-success">
+            <button class="panel-action panel-action--emerald-strong">
               <span>Attach Resource</span>
               <span class="text-lg">＋</span>
             </button>
