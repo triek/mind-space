@@ -1,0 +1,17 @@
+{
+ "version": 1.1,
+ "atDirectives": [
+   {
+     "name": "@apply",
+     "description": "Use the `@apply` directive to inline existing Tailwind utility classes."
+   },
+   {
+     "name": "@theme",
+     "description": "Define custom design tokens like colors and fonts."
+   },
+   {
+     "name": "@layer",
+     "description": "Assign custom styles to base, components, or utilities layers."
+   }
+ ]
+}
