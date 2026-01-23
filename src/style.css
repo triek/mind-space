@@ -73,6 +73,14 @@
     @apply rounded-full border border-white/10 px-4 py-2 text-sm text-soft transition;
   }
 
+  .button-pill--surface {
+    @apply bg-slate-800/70;
+  }
+
+  .button-pill--surface-strong {
+    @apply bg-slate-800/80;
+  }
+
   .button-pill--success {
     @apply hover:border-emerald-400/50 hover-text-success;
   }
@@ -89,20 +97,148 @@
     @apply rounded-2xl border border-emerald-400/40 bg-emerald-500/10 py-3 text-sm font-medium text-success-strong transition hover:border-emerald-300 hover:bg-emerald-500/20;
   }
 
+  .button-emerald--wide {
+    @apply px-5;
+  }
+
+  .button-emerald--compact {
+    @apply px-4;
+  }
+
+  .button-emerald--fit {
+    @apply h-fit;
+  }
+
   .button-card {
     @apply rounded-2xl border border-white/10 bg-slate-800/80 px-4 py-3 text-sm font-medium text-primary transition;
+  }
+
+  .button-card--success {
+    @apply hover:border-emerald-400/60 hover-text-success;
+  }
+
+  .button-card--warning {
+    @apply hover:border-amber-400/60 hover-text-warning-soft;
+  }
+
+  .button-card--info {
+    @apply hover:border-sky-400/60 hover-text-info;
+  }
+
+  .button-card--danger {
+    @apply hover:border-rose-400/60 hover-text-danger-soft;
   }
 
   .button-quick {
     @apply flex items-center justify-between rounded-2xl px-4 py-3 text-left text-sm font-medium transition;
   }
 
+  .button-quick--emerald {
+    @apply bg-emerald-500/20 text-success-strong hover:bg-emerald-500/30;
+  }
+
+  .button-quick--violet {
+    @apply bg-violet-500/20 text-primary hover:bg-violet-500/30;
+  }
+
+  .button-round-emerald {
+    @apply rounded-full bg-emerald-500/20 px-4 py-2 text-sm font-medium text-success transition hover:bg-emerald-500/30;
+  }
+
+  .button-block-sky {
+    @apply w-full rounded-2xl bg-sky-500/20 px-4 py-3 text-sm font-semibold text-info transition hover:bg-sky-500/30;
+  }
+
+  .button-block-sky--spaced {
+    @apply mt-5;
+  }
+
+  .button-quiz-card {
+    @apply rounded-2xl border px-4 py-3 text-left text-sm font-medium transition;
+  }
+
+  .button-quiz-card--selected {
+    @apply border-emerald-400/60 bg-emerald-500/10 text-success-strong;
+  }
+
+  .button-quiz-card--default {
+    @apply border-white/10 bg-slate-800/80 text-primary hover:border-emerald-400/50 hover-text-success;
+  }
+
+  .button-outline-slate {
+    @apply rounded-2xl border border-white/10 bg-slate-800/70 px-5 py-3 text-sm font-medium text-primary transition hover:border-slate-500/60;
+  }
+
+  .button-outline-emerald {
+    @apply rounded-full border border-emerald-400/40 bg-emerald-500/10 px-4 py-2 text-sm font-medium text-success transition hover:bg-emerald-500/20;
+  }
+
   .panel-action {
     @apply panel-item flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-primary transition;
   }
 
+  .panel-action--emerald {
+    @apply hover:border-emerald-400/50 hover-text-success;
+  }
+
+  .panel-action--emerald-strong {
+    @apply hover:border-emerald-400/60 hover-text-success;
+  }
+
+  .panel-action--info {
+    @apply hover:border-sky-400/50 hover-text-info;
+  }
+
+  .panel-action--danger {
+    @apply border border-rose-400/30 bg-rose-500/10 text-danger hover:border-rose-400/60;
+  }
+
   .panel-button {
     @apply panel-item w-full px-4 py-3 text-left text-sm font-medium text-primary transition;
+  }
+
+  .panel-button--danger {
+    @apply hover:border-rose-400/70 hover-text-danger;
+  }
+
+  .button-disabled {
+    @apply opacity-50;
+  }
+
+  .quiz-option {
+    @apply flex cursor-pointer items-center gap-3 rounded-2xl border border-white/10 bg-slate-800/70 px-4 py-3 text-sm transition hover:border-emerald-400/40;
+  }
+
+  .nav-button {
+    @apply flex h-14 w-14 items-center justify-center rounded-full text-xl text-primary transition;
+  }
+
+  .nav-button--active {
+    @apply ring-2 ring-white/70 ring-offset-2 ring-offset-slate-900;
+  }
+
+  .nav-button--inactive {
+    @apply opacity-80 hover:opacity-100;
+  }
+
+  .nav-button--emerald {
+    @apply bg-emerald-500/90;
+  }
+
+  .nav-button--sky {
+    @apply bg-sky-500/90;
+  }
+
+  .nav-button--violet {
+    @apply bg-violet-500/90;
+  }
+
+  .nav-button--amber {
+    @apply bg-amber-500/90;
+  }
+
+  .nav-button--rose {
+    @apply bg-rose-500/90;
   }
 
   .list-row {

@@ -8,7 +8,7 @@
         </div>
         <div class="flex items-center gap-3">
           <button
-            class="button-pill button-pill--success bg-slate-800/70"
+            class="button-pill button-pill--success button-pill--surface"
             @click="emit('navigate', 'home')"
           >
             ← Back to home
@@ -37,11 +37,11 @@
             <button
               v-for="quiz in quizzes"
               :key="quiz.id"
-              class="rounded-2xl border px-4 py-3 text-left text-sm font-medium transition"
+              class="button-quiz-card"
               :class="
                 selectedQuizId === quiz.id
-                  ? 'border-emerald-400/60 bg-emerald-500/10 text-success-strong'
-                  : 'border-white/10 bg-slate-800/80 text-primary hover:border-emerald-400/50 hover-text-success'
+                  ? 'button-quiz-card--selected'
+                  : 'button-quiz-card--default'
               "
               @click="selectQuiz(quiz.id)"
             >
@@ -65,13 +65,13 @@
           </div>
           <div class="mt-6 flex flex-wrap items-center gap-3">
             <button
-              class="button-emerald px-5"
+              class="button-emerald button-emerald--wide"
               @click="startQuiz"
             >
               Start Quiz
             </button>
             <button
-              class="rounded-2xl border border-white/10 bg-slate-800/70 px-5 py-3 text-sm font-medium text-primary transition hover:border-slate-500/60"
+              class="button-outline-slate"
               @click="resetQuiz"
             >
               Clear Answers
@@ -96,7 +96,7 @@
             <label
               v-for="option in scaleOptions"
               :key="option.value"
-              class="flex cursor-pointer items-center gap-3 rounded-2xl border border-white/10 bg-slate-800/70 px-4 py-3 text-sm transition hover:border-emerald-400/40"
+              class="quiz-option"
             >
               <input
                 v-model.number="currentAnswer"
@@ -113,7 +113,7 @@
           <div class="mt-6 flex flex-wrap items-center justify-between gap-3">
             <p class="meta-label-faint">Next up: {{ nextQuestionPreview }}</p>
             <button
-              class="button-emerald px-5"
+              class="button-emerald button-emerald--wide"
               @click="nextQuestion"
             >
               Next Question
@@ -137,7 +137,7 @@
           </div>
           <div class="mt-6 flex flex-wrap items-center gap-3">
             <button
-              class="button-emerald px-5"
+              class="button-emerald button-emerald--wide"
               @click="saveResult"
             >
               Save Result
@@ -152,15 +152,15 @@
           <p class="section-label">Simple commands</p>
           <div class="mt-5 space-y-4">
             <button
-              class="panel-action hover:border-emerald-400/50"
+              class="panel-action panel-action--emerald"
               @click="startQuiz"
             >
               <span>Start Quiz</span>
               <span class="text-lg">▶️</span>
             </button>
             <button
-              class="panel-action hover:border-emerald-400/50"
-              :class="{ 'opacity-50': !inProgress }"
+              class="panel-action panel-action--emerald"
+              :class="{ 'button-disabled': !inProgress }"
               :disabled="!inProgress"
               @click="nextQuestion"
             >
@@ -168,8 +168,8 @@
               <span class="text-lg">➡️</span>
             </button>
             <button
-              class="panel-action hover:border-emerald-400/50"
-              :class="{ 'opacity-50': !completed }"
+              class="panel-action panel-action--emerald"
+              :class="{ 'button-disabled': !completed }"
               :disabled="!completed"
               @click="saveResult"
             >

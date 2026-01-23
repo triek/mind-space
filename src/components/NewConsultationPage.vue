@@ -11,7 +11,7 @@
             Draft in progress
           </div>
           <button
-            class="button-pill button-pill--success bg-slate-800/70"
+            class="button-pill button-pill--success button-pill--surface"
             @click="emit('navigate', 'home')"
           >
             Back to Home
@@ -62,7 +62,7 @@
                   <option>Sleep</option>
                 </select>
               </div>
-              <button class="button-emerald h-fit px-4">
+              <button class="button-emerald button-emerald--fit button-emerald--compact">
                 Help me explain
               </button>
             </div>

@@ -7,7 +7,7 @@
           <h1 class="page-title">Resources</h1>
         </div>
         <button
-          class="button-pill button-pill--warning bg-slate-800/70"
+          class="button-pill button-pill--warning button-pill--surface"
           @click="emit('navigate', 'home')"
         >
           ← Back to home

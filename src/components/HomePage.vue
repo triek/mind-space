@@ -25,16 +25,16 @@
         </div>
 
         <div class="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-          <button class="button-card hover:border-emerald-400/60 hover-text-success">
+          <button class="button-card button-card--success">
             🌤️ Calm
           </button>
-          <button class="button-card hover:border-amber-400/60 hover-text-warning-soft">
+          <button class="button-card button-card--warning">
             🌿 Steady
           </button>
-          <button class="button-card hover:border-sky-400/60 hover-text-info">
+          <button class="button-card button-card--info">
             💭 Reflective
           </button>
-          <button class="button-card hover:border-rose-400/60 hover-text-danger-soft">
+          <button class="button-card button-card--danger">
             🌧️ Overwhelmed
           </button>
         </div>
@@ -54,7 +54,7 @@
         <div class="mt-6 flex flex-wrap items-center justify-between gap-3">
           <p class="meta-label">Last step saved</p>
           <button
-            class="rounded-full bg-emerald-500/20 px-4 py-2 text-sm font-medium text-success transition hover:bg-emerald-500/30"
+            class="button-round-emerald"
             @click="emit('navigate', 'thread-detail')"
           >
             Continue thread
@@ -77,7 +77,7 @@
           "I want to feel less anxious before my next project review."
         </div>
         <button
-          class="mt-5 w-full rounded-2xl bg-sky-500/20 px-4 py-3 text-sm font-semibold text-info transition hover:bg-sky-500/30"
+          class="button-block-sky button-block-sky--spaced"
           @click="emit('navigate', 'new-thread')"
         >
           Create new thread
@@ -88,14 +88,14 @@
         <p class="section-label">Quick actions</p>
         <div class="mt-4 grid gap-3 sm:grid-cols-2">
           <button
-            class="button-quick bg-emerald-500/20 text-success-strong hover:bg-emerald-500/30"
+            class="button-quick button-quick--emerald"
             @click="emit('navigate', 'assessment')"
           >
             <span>Start an assessment</span>
             <span class="text-lg">📝</span>
           </button>
           <button
-            class="button-quick bg-violet-500/20 text-primary hover:bg-violet-500/30"
+            class="button-quick button-quick--violet"
             @click="emit('navigate', 'progress')"
           >
             <span>Review progress</span>
