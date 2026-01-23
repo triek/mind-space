@@ -69,6 +69,58 @@
     @apply rounded-2xl border border-white/10 bg-slate-800/70;
   }
 
+  .button-pill {
+    @apply rounded-full border border-white/10 px-4 py-2 text-sm text-soft transition;
+  }
+
+  .button-pill--success {
+    @apply hover:border-emerald-400/50 hover-text-success;
+  }
+
+  .button-pill--success-strong {
+    @apply hover:border-emerald-400/50 hover-text-success-strong;
+  }
+
+  .button-pill--warning {
+    @apply hover:border-amber-300/60 hover-text-warning;
+  }
+
+  .button-emerald {
+    @apply rounded-2xl border border-emerald-400/40 bg-emerald-500/10 py-3 text-sm font-medium text-success-strong transition hover:border-emerald-300 hover:bg-emerald-500/20;
+  }
+
+  .button-card {
+    @apply rounded-2xl border border-white/10 bg-slate-800/80 px-4 py-3 text-sm font-medium text-primary transition;
+  }
+
+  .button-quick {
+    @apply flex items-center justify-between rounded-2xl px-4 py-3 text-left text-sm font-medium transition;
+  }
+
+  .panel-action {
+    @apply panel-item flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-primary transition;
+  }
+
+  .panel-button {
+    @apply panel-item w-full px-4 py-3 text-left text-sm font-medium text-primary transition;
+  }
+
+  .list-row {
+    @apply panel-item flex items-center justify-between px-4 py-3;
+  }
+
+  .textarea-base {
+    @apply w-full rounded-2xl border border-white/10 px-4 py-3 text-sm text-contrast placeholder-faint focus:border-emerald-400/60 focus:outline-none;
+  }
+
+  .textarea-resize-none {
+    @apply resize-none;
+  }
+
+  .textarea-ring {
+    @apply focus:ring-2 focus:ring-emerald-500/20;
+  }
+
   .text-primary {
     @apply text-white;
   }

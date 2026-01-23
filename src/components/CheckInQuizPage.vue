@@ -8,7 +8,7 @@
         </div>
         <div class="flex items-center gap-3">
           <button
-            class="rounded-full border border-white/10 bg-slate-800/70 px-4 py-2 text-sm text-soft transition hover:border-emerald-400/50 hover-text-success"
+            class="button-pill button-pill--success bg-slate-800/70"
             @click="emit('navigate', 'home')"
           >
             ← Back to home
@@ -65,7 +65,7 @@
           </div>
           <div class="mt-6 flex flex-wrap items-center gap-3">
             <button
-              class="rounded-2xl border border-emerald-400/40 bg-emerald-500/10 px-5 py-3 text-sm font-medium text-success-strong transition hover:border-emerald-300 hover:bg-emerald-500/20"
+              class="button-emerald px-5"
               @click="startQuiz"
             >
               Start Quiz
@@ -113,7 +113,7 @@
           <div class="mt-6 flex flex-wrap items-center justify-between gap-3">
             <p class="meta-label-faint">Next up: {{ nextQuestionPreview }}</p>
             <button
-              class="rounded-2xl border border-emerald-400/40 bg-emerald-500/10 px-5 py-3 text-sm font-medium text-success-strong transition hover:border-emerald-300 hover:bg-emerald-500/20"
+              class="button-emerald px-5"
               @click="nextQuestion"
             >
               Next Question
@@ -137,7 +137,7 @@
           </div>
           <div class="mt-6 flex flex-wrap items-center gap-3">
             <button
-              class="rounded-2xl border border-emerald-400/40 bg-emerald-500/10 px-5 py-3 text-sm font-medium text-success-strong transition hover:border-emerald-300 hover:bg-emerald-500/20"
+              class="button-emerald px-5"
               @click="saveResult"
             >
               Save Result
@@ -152,14 +152,14 @@
           <p class="section-label">Simple commands</p>
           <div class="mt-5 space-y-4">
             <button
-              class="panel-item flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-primary transition hover:border-emerald-400/50"
+              class="panel-action hover:border-emerald-400/50"
               @click="startQuiz"
             >
               <span>Start Quiz</span>
               <span class="text-lg">▶️</span>
             </button>
             <button
-              class="panel-item flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-primary transition hover:border-emerald-400/50"
+              class="panel-action hover:border-emerald-400/50"
               :class="{ 'opacity-50': !inProgress }"
               :disabled="!inProgress"
               @click="nextQuestion"
@@ -168,7 +168,7 @@
               <span class="text-lg">➡️</span>
             </button>
             <button
-              class="panel-item flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-primary transition hover:border-emerald-400/50"
+              class="panel-action hover:border-emerald-400/50"
               :class="{ 'opacity-50': !completed }"
               :disabled="!completed"
               @click="saveResult"

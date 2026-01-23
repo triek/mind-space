@@ -11,7 +11,7 @@
             Draft in progress
           </div>
           <button
-            class="rounded-full border border-white/10 bg-slate-800/70 px-4 py-2 text-sm text-soft transition hover:border-emerald-400/50 hover-text-success"
+            class="button-pill button-pill--success bg-slate-800/70"
             @click="emit('navigate', 'home')"
           >
             Back to Home
@@ -44,7 +44,7 @@
               id="thread-notes"
               rows="6"
               placeholder="Describe what led up to this moment, what feels most urgent, and what support you need."
-              class="w-full resize-none rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-sm text-contrast placeholder-faint focus:border-emerald-400/60 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+              class="textarea-base textarea-resize-none textarea-ring bg-slate-950/60"
             ></textarea>
             <div class="flex flex-wrap items-center gap-3">
               <div class="flex-1">
@@ -62,9 +62,7 @@
                   <option>Sleep</option>
                 </select>
               </div>
-              <button
-                class="h-fit rounded-2xl border border-emerald-400/40 bg-emerald-500/10 px-4 py-3 text-sm font-medium text-success-strong transition hover:border-emerald-300 hover:bg-emerald-500/20"
-              >
+              <button class="button-emerald h-fit px-4">
                 Help me explain
               </button>
             </div>

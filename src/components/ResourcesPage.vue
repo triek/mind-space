@@ -7,7 +7,7 @@
           <h1 class="page-title">Resources</h1>
         </div>
         <button
-          class="rounded-full border border-white/10 bg-slate-800/70 px-4 py-2 text-sm text-soft transition hover:border-amber-300/60 hover-text-warning"
+          class="button-pill button-pill--warning bg-slate-800/70"
           @click="emit('navigate', 'home')"
         >
           ← Back to home

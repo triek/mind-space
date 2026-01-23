@@ -7,7 +7,7 @@
           <h1 class="page-title">Urgent Help</h1>
         </div>
         <button
-          class="rounded-full border border-white/10 bg-slate-800/70 px-4 py-2 text-sm text-soft transition hover:border-emerald-400/50 hover-text-success-strong"
+          class="button-pill button-pill--success-strong bg-slate-800/70"
           @click="emit('navigate', 'home')"
         >
           ← Back to home
@@ -55,12 +55,12 @@
           <p class="section-label">Simple commands</p>
           <div class="mt-5 space-y-4">
             <button
-              class="panel-item w-full px-4 py-3 text-left text-sm font-medium text-primary transition hover:border-rose-400/70 hover-text-danger"
+              class="panel-button hover:border-rose-400/70 hover-text-danger"
             >
               Open Safety Help
             </button>
             <button
-              class="panel-item w-full px-4 py-3 text-left text-sm font-medium text-primary transition hover:border-rose-400/70 hover-text-danger"
+              class="panel-button hover:border-rose-400/70 hover-text-danger"
             >
               View support options
             </button>

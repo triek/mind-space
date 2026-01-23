@@ -7,7 +7,7 @@
           <h1 class="page-title">Progress Page</h1>
         </div>
         <button
-          class="rounded-full border border-white/10 bg-slate-800/70 px-4 py-2 text-sm text-soft transition hover:border-emerald-400/50 hover-text-success-strong"
+          class="button-pill button-pill--success-strong bg-slate-800/70"
           @click="emit('navigate', 'home')"
         >
           ← Back to home
@@ -74,7 +74,7 @@
             <li
               v-for="mood in moodHistory"
               :key="`${mood.date}-${mood.label}`"
-              class="panel-item flex items-center justify-between px-4 py-3"
+              class="list-row"
             >
               <div>
                 <p class="panel-value">{{ mood.label }}</p>
@@ -108,7 +108,7 @@
             </div>
 
             <button
-              class="panel-item flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-primary transition hover:border-sky-400/50 hover-text-info"
+              class="panel-action hover:border-sky-400/50 hover-text-info"
               @click="toggleLast7Days"
             >
               <span>View last 7 days</span>
