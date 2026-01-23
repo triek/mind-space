@@ -1,7 +1,7 @@
 <template>
   <div class="app-shell">
-    <header class="page-header page-header--muted">
-      <div class="page-container-6xl page-header__layout py-6">
+    <header class="page-header page-header--muted sticky top-0 z-50">
+      <div class="page-container-6xl page-header__layout">
         <div>
           <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Mind Space</p>
           <h1 class="text-3xl font-semibold text-white">New Consultation Thread</h1>
@@ -20,7 +20,7 @@
       </div>
     </header>
 
-    <main class="page-container-6xl grid gap-6 py-4 lg:grid-cols-[2fr_1fr]">
+    <main class="page-container-6xl py-4 grid gap-6 lg:grid-cols-[2fr_1fr]">
       <section class="space-y-6">
         <div class="page-section">
           <div class="flex flex-wrap items-start justify-between gap-4">

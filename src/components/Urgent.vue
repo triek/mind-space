@@ -1,7 +1,7 @@
 <template>
   <div class="app-shell">
-    <header class="page-header page-header--muted">
-      <div class="page-container-6xl page-header__layout py-4">
+    <header class="page-header page-header--muted sticky top-0 z-50">
+      <div class="page-container-6xl page-header__layout">
         <div>
           <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Mind Space</p>
           <h1 class="text-3xl font-semibold text-white">Urgent Help</h1>
@@ -15,8 +15,8 @@
       </div>
     </header>
 
-    <main class="page-container-6xl grid gap-6 py-4 lg:grid-cols-[2fr_1fr]">
-      <section class="space-y-6">
+    <main class="page-container-6xl py-4 grid gap-4 lg:grid-cols-[2fr_1fr]">
+      <section class="space-y-4">
         <div class="rounded-3xl border border-rose-500/40 bg-rose-500/10 p-6 shadow-lg shadow-slate-900/40">
           <p class="text-sm uppercase tracking-[0.2em] text-rose-200">Immediate support</p>
           <h2 class="mt-2 text-2xl font-semibold text-white">You are not alone</h2>
