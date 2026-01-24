@@ -101,23 +101,23 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --color-surface: #fffaf2;
-  --color-surface-2: rgba(255, 255, 255, 0.8);
+  --color-surface: #fffefc;
+  --color-surface-2: #fffefc;
   --color-foreground: #0f172a;
   --color-muted: #64748b;
   --color-faint: #94a3b8;
-  --color-border: rgba(253, 230, 138, 0.7);
-  --color-primary: #fde68a;
-  --color-success: #d1fae5;
+  --color-border: #9f9f9f;
+  --color-primary: #FFF3DB;
+  --color-success: #EEF3DD;
   --color-warning: #fffbeb;
-  --color-danger: #ffe4e6;
+  --color-danger: #FCE6DB;
   --color-info: #e0f2fe;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #f8f1e6;
+  background-color: #F7F4F2;
 }
 
 * {
