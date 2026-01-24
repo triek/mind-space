@@ -17,13 +17,13 @@
 
     <main class="page-container-6xl py-4 grid gap-4 lg:grid-cols-[2fr_1fr]">
       <section class="space-y-4">
-        <div class="rounded-3xl border border-rose-500/40 bg-rose-500/10 p-6 shadow-lg shadow-slate-900/40">
+        <div class="surface-rose rounded-3xl p-6">
           <p class="section-label text-danger-strong">Immediate support</p>
           <h2 class="mt-2 section-title">You are not alone</h2>
           <p class="text-body-relaxed leading-relaxed text-soft">
             Reach out to trusted people, professionals, or local crisis lines for real-time support.
           </p>
-          <div class="mt-5 rounded-2xl border border-white/10 bg-slate-900/70 p-4 text-sm text-soft">
+          <div class="surface-cream mt-5 rounded-2xl p-4 text-sm text-soft">
             Crisis links placeholder
           </div>
         </div>

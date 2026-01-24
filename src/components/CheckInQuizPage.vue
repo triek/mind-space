@@ -29,7 +29,7 @@
               </p>
             </div>
             <div class="pill-muted flex items-center gap-2">
-              <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+              <span class="status-dot h-2 w-2 rounded-full"></span>
               Ready to start
             </div>
           </div>
@@ -123,7 +123,7 @@
 
         <div
           v-if="selectedQuiz && completed"
-          class="rounded-3xl border border-emerald-400/20 bg-emerald-500/5 p-6 shadow-lg shadow-slate-900/40"
+          class="surface-emerald rounded-3xl p-6"
         >
           <div class="flex flex-wrap items-start justify-between gap-4">
             <div>
@@ -192,7 +192,7 @@
               <p class="meta-label">Progress</p>
               <p class="mt-2 panel-value">{{ progressText }}</p>
             </div>
-            <div class="rounded-2xl bg-slate-800/70 px-4 py-3">
+            <div class="surface-cream rounded-2xl px-4 py-3">
               <p class="meta-label">Latest score</p>
               <p class="mt-2 panel-value">
                 {{ completed ? totalScore : 'Complete the quiz to see a score' }}

@@ -36,7 +36,7 @@
                 I felt stretched thin this week and had trouble disconnecting after work.
               </p>
             </div>
-            <div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4">
+            <div class="surface-emerald rounded-2xl p-4">
               <p class="meta-label text-success">Counselor · 9:18 AM</p>
               <p class="mt-2 text-sm text-contrast">
                 Thanks for sharing that. Let’s focus on a short wind-down ritual to help you transition
@@ -49,7 +49,7 @@
                 I can try a quick walk and a short breathing exercise before dinner.
               </p>
             </div>
-            <div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4">
+            <div class="surface-emerald rounded-2xl p-4">
               <p class="meta-label text-success">Counselor · 9:45 AM</p>
               <p class="mt-2 text-sm text-contrast">
                 Great plan. I’ll share a two-minute grounding audio and check in tomorrow.
@@ -63,7 +63,7 @@
           <div class="mt-4 space-y-4">
             <textarea
               rows="4"
-              class="textarea-base bg-slate-950/80"
+              class="textarea-base surface-cream-soft"
               placeholder="Write your next message to your counselor..."
             ></textarea>
             <div class="flex flex-wrap items-center justify-between gap-3">

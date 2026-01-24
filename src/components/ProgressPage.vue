@@ -24,7 +24,7 @@
               <h2 class="section-title">Past scores over time</h2>
             </div>
             <div class="pill-muted--bordered flex items-center gap-2">
-              <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+              <span class="status-dot h-2 w-2 rounded-full"></span>
               {{ filteredScores.length }} records
             </div>
           </div>
@@ -47,9 +47,9 @@
                   <span>Score</span>
                   <span>{{ score.score }}/27</span>
                 </div>
-                <div class="mt-2 h-2 w-full overflow-hidden rounded-full bg-slate-900">
+                <div class="progress-track mt-2 h-2 w-full overflow-hidden rounded-full">
                   <div
-                    class="h-full rounded-full bg-gradient-to-r from-emerald-400 via-emerald-300 to-sky-400"
+                    class="progress-fill h-full rounded-full"
                     :style="{ width: `${(score.score / 27) * 100}%` }"
                   ></div>
                 </div>
@@ -100,7 +100,7 @@
               <select
                 id="quizFilter"
                 v-model="activeFilter"
-                class="mt-2 w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-2 text-sm text-primary"
+                class="surface-cream-strong mt-2 w-full rounded-xl px-3 py-2 text-sm text-primary"
               >
                 <option value="all">All quiz types</option>
                 <option v-for="type in quizTypes" :key="type" :value="type">{{ type }}</option>

@@ -32,7 +32,7 @@
               </p>
             </div>
             <div class="pill-muted flex items-center gap-2">
-              <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+              <span class="status-dot h-2 w-2 rounded-full"></span>
               Drafting
             </div>
           </div>
@@ -44,7 +44,7 @@
               id="thread-notes"
               rows="6"
               placeholder="Describe what led up to this moment, what feels most urgent, and what support you need."
-              class="textarea-base textarea-resize-none textarea-ring bg-slate-950/60"
+              class="textarea-base textarea-resize-none textarea-ring surface-cream-soft"
             ></textarea>
             <div class="flex flex-wrap items-center gap-3">
               <div class="flex-1">
@@ -53,7 +53,7 @@
                 </label>
                 <select
                   id="thread-topic"
-                  class="mt-2 w-full rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-sm text-contrast focus:border-emerald-400/60 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                  class="surface-cream-strong mt-2 w-full rounded-2xl px-4 py-3 text-sm text-contrast focus:border-emerald-300 focus:outline-none focus:ring-2 focus:ring-emerald-200/60"
                 >
                   <option>Pick a topic</option>
                   <option>Stress</option>
@@ -67,19 +67,19 @@
               </button>
             </div>
           </div>
-          <div class="mt-6 rounded-2xl border border-white/10 bg-slate-950/50 p-4">
+          <div class="surface-cream mt-6 rounded-2xl p-4">
             <div class="flex items-center justify-between">
               <p class="meta-label">Suggested phrasing templates</p>
               <span class="text-xs text-faint">Templates, not AI-generated</span>
             </div>
             <ul class="mt-3 space-y-2 text-sm text-soft">
-              <li class="rounded-xl bg-slate-900/70 px-3 py-2">
+              <li class="surface-note rounded-xl px-3 py-2">
                 “I’ve been noticing ___ lately, and it’s starting to affect ___.”
               </li>
-              <li class="rounded-xl bg-slate-900/70 px-3 py-2">
+              <li class="surface-note rounded-xl px-3 py-2">
                 “The toughest part right now is ___, and I’m hoping to find ways to ___.”
               </li>
-              <li class="rounded-xl bg-slate-900/70 px-3 py-2">
+              <li class="surface-note rounded-xl px-3 py-2">
                 “I could use support with ___ because ___ feels overwhelming.”
               </li>
             </ul>

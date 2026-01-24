@@ -19,7 +19,7 @@
             </p>
           </div>
           <div class="pill-muted flex items-center gap-2">
-            <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+          <span class="status-dot h-2 w-2 rounded-full"></span>
             Check-in open
           </div>
         </div>
@@ -73,7 +73,7 @@
           </div>
           <span class="pill-muted">Draft ready</span>
         </div>
-        <div class="mt-5 rounded-2xl border border-white/10 bg-slate-800/70 p-4 text-sm text-soft">
+        <div class="surface-cream mt-5 rounded-2xl p-4 text-sm text-soft">
           "I want to feel less anxious before my next project review."
         </div>
         <button
