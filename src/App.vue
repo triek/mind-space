@@ -1,10 +1,10 @@
 <template>
-  <div class="app-shell app-shell--relative">
+  <div class="relative min-h-screen text-foreground">
     <div class="pb-32">
       <component :is="activeComponent" @navigate="handleNavigate" />
     </div>
     <nav
-      class="nav-surface fixed bottom-5 left-1/2 z-20 flex -translate-x-1/2 items-center gap-4 rounded-full px-6 py-3"
+      class="fixed bottom-5 left-1/2 z-20 flex -translate-x-1/2 items-center gap-4 rounded-full border bg-surface-2 px-6 py-3 backdrop-blur"
       aria-label="Primary"
     >
       <button
@@ -13,7 +13,7 @@
         class="nav-button"
         :class="[
           item.color,
-          activeNav === item.page ? 'nav-button--active' : 'nav-button--inactive'
+          activeNav === item.page ? 'border-2' : 'opacity-80'
         ]"
         :aria-label="item.label"
         @click="handleNavigate(item.page)"
@@ -65,11 +65,11 @@ const activeComponent = computed(() => {
 })
 
 const navItems = [
-  { page: 'home', label: 'Mood check', icon: '🏠', color: 'nav-button--emerald' },
-  { page: 'assessment', label: 'Assessment', icon: '📝', color: 'nav-button--sky' },
-  { page: 'progress', label: 'Progress', icon: '📈', color: 'nav-button--violet' },
-  { page: 'resources', label: 'Resources', icon: '📚', color: 'nav-button--amber' },
-  { page: 'safety', label: 'Urgent help', icon: '🆘', color: 'nav-button--rose' },
+  { page: 'home', label: 'Mood check', icon: '🏠', color: 'bg-success' },
+  { page: 'assessment', label: 'Assessment', icon: '📝', color: 'bg-info' },
+  { page: 'progress', label: 'Progress', icon: '📈', color: 'bg-primary' },
+  { page: 'resources', label: 'Resources', icon: '📚', color: 'bg-warning' },
+  { page: 'safety', label: 'Urgent help', icon: '🆘', color: 'bg-danger' },
 ]
 
 const activeNav = computed(() => {

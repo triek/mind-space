@@ -1,14 +1,14 @@
 <template>
-  <div class="app-shell">
-    <header class="page-header page-header--muted sticky top-0 z-50">
-      <div class="page-container-6xl page-header__layout">
+  <div>
+    <header class="sticky top-0 z-50 border-b bg-surface-2">
+      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4">
         <div>
-          <p class="page-kicker">Mind Space</p>
-          <h1 class="page-title">Assessment</h1>
+          <p class="text-sm uppercase tracking-[0.3em] text-faint">Mind Space</p>
+          <h1 class="text-3xl font-semibold">Assessment</h1>
         </div>
         <div class="flex items-center gap-3">
           <button
-            class="button-pill button-pill--success button-pill--surface"
+            class="button button--sm bg-success"
             @click="emit('navigate', 'home')"
           >
             ← Back to home
@@ -17,19 +17,19 @@
       </div>
     </header>
 
-    <main class="page-container-6xl py-4 grid gap-4 lg:grid-cols-[2fr_1fr]">
+    <main class="mx-auto grid max-w-6xl gap-4 px-4 py-4 lg:grid-cols-[2fr_1fr]">
       <section class="space-y-4">
-        <div class="page-section">
+        <div class="page-section bg-surface">
           <div class="flex flex-wrap items-start justify-between gap-4">
             <div>
-              <p class="section-label">Pick ONE quiz to start</p>
-              <h2 class="section-title">Choose your check-in</h2>
-              <p class="text-body-tight">
+              <p class="text-xs uppercase tracking-[0.2em] text-muted">Pick ONE quiz to start</p>
+              <h2 class="text-2xl font-semibold">Choose your check-in</h2>
+              <p class="mt-2 text-sm text-muted">
                 Select a short assessment to capture how you are feeling today. You can run one at a time.
               </p>
             </div>
-            <div class="pill-muted flex items-center gap-2">
-              <span class="status-dot h-2 w-2 rounded-full"></span>
+            <div class="pill bg-warning">
+              <span class="h-2 w-2 rounded-full bg-success"></span>
               Ready to start
             </div>
           </div>
@@ -37,58 +37,56 @@
             <button
               v-for="quiz in quizzes"
               :key="quiz.id"
-              class="button-quiz-card"
-              :class="
-                selectedQuizId === quiz.id
-                  ? 'button-quiz-card--selected'
-                  : 'button-quiz-card--default'
-              "
+              class="button button--lg w-full flex-col items-start text-left"
+              :class="selectedQuizId === quiz.id ? 'bg-success' : 'bg-surface-2'"
               @click="selectQuiz(quiz.id)"
             >
-              <p class="meta-label">{{ quiz.label }}</p>
+              <p class="text-xs uppercase tracking-[0.2em] text-muted">{{ quiz.label }}</p>
               <p class="mt-2 text-lg font-semibold">{{ quiz.title }}</p>
               <p class="mt-2 text-xs text-muted">{{ quiz.description }}</p>
             </button>
           </div>
         </div>
 
-        <div v-if="selectedQuiz" class="page-section">
+        <div v-if="selectedQuiz" class="page-section bg-surface">
           <div class="flex flex-wrap items-start justify-between gap-4">
             <div>
-              <p class="section-label">Selected quiz</p>
-              <h3 class="section-title">{{ selectedQuiz.title }}</h3>
-              <p class="text-body-tight">{{ selectedQuiz.longDescription }}</p>
+              <p class="text-xs uppercase tracking-[0.2em] text-muted">Selected quiz</p>
+              <h3 class="text-2xl font-semibold">{{ selectedQuiz.title }}</h3>
+              <p class="mt-2 text-sm text-muted">{{ selectedQuiz.longDescription }}</p>
             </div>
-            <div class="panel-item px-4 py-2 text-sm text-soft">
-              {{ selectedQuiz.questions.length }} questions · {{ selectedQuiz.estimate }}
+            <div class="page-section page-section--sm bg-surface-2 text-sm">
+              <span class="text-muted">
+                {{ selectedQuiz.questions.length }} questions · {{ selectedQuiz.estimate }}
+              </span>
             </div>
           </div>
           <div class="mt-6 flex flex-wrap items-center gap-3">
             <button
-              class="button-emerald button-emerald--wide"
+              class="button button--lg bg-success"
               @click="startQuiz"
             >
               Start Quiz
             </button>
             <button
-              class="button-outline-slate"
+              class="button button--lg bg-warning"
               @click="resetQuiz"
             >
               Clear Answers
             </button>
-            <div class="panel-item px-4 py-3 meta-label">
-              {{ progressText }}
+            <div class="page-section page-section--sm bg-surface-2 text-xs uppercase tracking-[0.2em]">
+              <span class="text-muted">{{ progressText }}</span>
             </div>
           </div>
         </div>
 
-        <div v-if="selectedQuiz && inProgress" class="page-section">
+        <div v-if="selectedQuiz && inProgress" class="page-section bg-surface">
           <div class="flex flex-wrap items-center justify-between gap-4">
             <div>
-              <p class="section-label">Question {{ currentQuestionIndex + 1 }}</p>
-              <h3 class="panel-title">{{ currentQuestion }}</h3>
+              <p class="text-xs uppercase tracking-[0.2em] text-muted">Question {{ currentQuestionIndex + 1 }}</p>
+              <h3 class="text-xl font-semibold">{{ currentQuestion }}</h3>
             </div>
-            <span class="pill-muted">
+            <span class="pill bg-warning">
               {{ currentQuestionIndex + 1 }} of {{ selectedQuiz.questions.length }}
             </span>
           </div>
@@ -96,7 +94,7 @@
             <label
               v-for="option in scaleOptions"
               :key="option.value"
-              class="quiz-option"
+              class="page-section page-section--sm flex cursor-pointer items-center gap-3 bg-surface-2 text-sm"
             >
               <input
                 v-model.number="currentAnswer"
@@ -105,15 +103,15 @@
                 :value="option.value"
               />
               <div>
-                <p class="font-medium text-primary">{{ option.label }}</p>
-                <p class="text-caption">{{ option.description }}</p>
+                <p class="text-sm font-medium">{{ option.label }}</p>
+                <p class="text-xs text-muted">{{ option.description }}</p>
               </div>
             </label>
           </div>
           <div class="mt-6 flex flex-wrap items-center justify-between gap-3">
-            <p class="meta-label-faint">Next up: {{ nextQuestionPreview }}</p>
+            <p class="text-xs text-faint">Next up: {{ nextQuestionPreview }}</p>
             <button
-              class="button-emerald button-emerald--wide"
+              class="button button--lg bg-success"
               @click="nextQuestion"
             >
               Next Question
@@ -123,44 +121,44 @@
 
         <div
           v-if="selectedQuiz && completed"
-          class="surface-emerald rounded-3xl p-6"
+          class="page-section page-section--lg bg-success"
         >
           <div class="flex flex-wrap items-start justify-between gap-4">
             <div>
-              <p class="section-label text-success">Result</p>
-              <h3 class="section-title">Score: {{ totalScore }}</h3>
-              <p class="text-body-tight">{{ scoreMeaning?.detail }}</p>
+              <p class="text-xs uppercase tracking-[0.2em] text-muted">Result</p>
+              <h3 class="text-2xl font-semibold">Score: {{ totalScore }}</h3>
+              <p class="mt-2 text-sm text-muted">{{ scoreMeaning?.detail }}</p>
             </div>
-            <div class="panel-item px-4 py-3 text-sm text-success-strong">
+            <div class="page-section page-section--sm bg-surface-2 text-sm">
               {{ scoreMeaning?.label }}
             </div>
           </div>
           <div class="mt-6 flex flex-wrap items-center gap-3">
             <button
-              class="button-emerald button-emerald--wide"
+              class="button button--lg bg-success"
               @click="saveResult"
             >
               Save Result
             </button>
-            <p v-if="savedSummary" class="text-sm text-success">{{ savedSummary }}</p>
+            <p v-if="savedSummary" class="text-sm text-muted">{{ savedSummary }}</p>
           </div>
         </div>
       </section>
 
       <aside class="space-y-6">
-        <div class="page-section page-section--gradient-emerald">
-          <p class="section-label">Simple commands</p>
+        <div class="page-section bg-success">
+          <p class="text-xs uppercase tracking-[0.2em] text-muted">Simple commands</p>
           <div class="mt-5 space-y-4">
             <button
-              class="panel-action panel-action--emerald"
+              class="button button--lg w-full justify-between bg-surface-2"
               @click="startQuiz"
             >
               <span>Start Quiz</span>
               <span class="text-lg">▶️</span>
             </button>
             <button
-              class="panel-action panel-action--emerald"
-              :class="{ 'button-disabled': !inProgress }"
+              class="button button--lg w-full justify-between bg-surface-2"
+              :class="{ 'opacity-50': !inProgress }"
               :disabled="!inProgress"
               @click="nextQuestion"
             >
@@ -168,8 +166,8 @@
               <span class="text-lg">➡️</span>
             </button>
             <button
-              class="panel-action panel-action--emerald"
-              :class="{ 'button-disabled': !completed }"
+              class="button button--lg w-full justify-between bg-surface-2"
+              :class="{ 'opacity-50': !completed }"
               :disabled="!completed"
               @click="saveResult"
             >
@@ -179,22 +177,22 @@
           </div>
         </div>
 
-        <div class="page-section">
-          <p class="section-label">Session summary</p>
+        <div class="page-section bg-surface">
+          <p class="text-xs uppercase tracking-[0.2em] text-muted">Session summary</p>
           <div class="mt-4 space-y-3">
-            <div class="panel-item px-4 py-3">
-              <p class="meta-label">Selected quiz</p>
-              <p class="mt-2 panel-value">
+            <div class="page-section page-section--sm bg-surface-2">
+              <p class="text-xs uppercase tracking-[0.2em] text-muted">Selected quiz</p>
+              <p class="mt-2 text-sm font-medium">
                 {{ selectedQuiz ? selectedQuiz.title : 'None yet' }}
               </p>
             </div>
-            <div class="panel-item px-4 py-3">
-              <p class="meta-label">Progress</p>
-              <p class="mt-2 panel-value">{{ progressText }}</p>
+            <div class="page-section page-section--sm bg-surface-2">
+              <p class="text-xs uppercase tracking-[0.2em] text-muted">Progress</p>
+              <p class="mt-2 text-sm font-medium">{{ progressText }}</p>
             </div>
-            <div class="surface-cream rounded-2xl px-4 py-3">
-              <p class="meta-label">Latest score</p>
-              <p class="mt-2 panel-value">
+            <div class="page-section page-section--sm bg-surface-2">
+              <p class="text-xs uppercase tracking-[0.2em] text-muted">Latest score</p>
+              <p class="mt-2 text-sm font-medium">
                 {{ completed ? totalScore : 'Complete the quiz to see a score' }}
               </p>
             </div>

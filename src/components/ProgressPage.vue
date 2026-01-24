@@ -1,13 +1,13 @@
 <template>
-  <div class="app-shell">
-    <header class="page-header page-header--muted sticky top-0 z-50">
-      <div class="page-container-6xl page-header__layout">
+  <div>
+    <header class="sticky top-0 z-50 border-b bg-surface-2">
+      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4">
         <div>
-          <p class="page-kicker">Mind Space</p>
-          <h1 class="page-title">Progress Page</h1>
+          <p class="text-sm uppercase tracking-[0.3em] text-faint">Mind Space</p>
+          <h1 class="text-3xl font-semibold">Progress Page</h1>
         </div>
         <button
-          class="button-pill button-pill--success-strong button-pill--surface"
+          class="button button--sm bg-success"
           @click="emit('navigate', 'home')"
         >
           ← Back to home
@@ -15,16 +15,16 @@
       </div>
     </header>
 
-    <main class="page-container-6xl py-4 grid gap-4 lg:grid-cols-[2fr_1fr]">
+    <main class="mx-auto grid max-w-6xl gap-4 px-4 py-4 lg:grid-cols-[2fr_1fr]">
       <section class="space-y-4">
-        <div class="page-section">
+        <div class="page-section bg-surface">
           <div class="flex flex-wrap items-center justify-between gap-3">
             <div>
-              <p class="section-label">Score trends</p>
-              <h2 class="section-title">Past scores over time</h2>
+              <p class="text-xs uppercase tracking-[0.2em] text-muted">Score trends</p>
+              <h2 class="text-2xl font-semibold">Past scores over time</h2>
             </div>
-            <div class="pill-muted--bordered flex items-center gap-2">
-              <span class="status-dot h-2 w-2 rounded-full"></span>
+            <div class="pill bg-warning">
+              <span class="h-2 w-2 rounded-full bg-success"></span>
               {{ filteredScores.length }} records
             </div>
           </div>
@@ -33,74 +33,74 @@
             <div
               v-for="score in filteredScores"
               :key="`${score.date}-${score.type}`"
-              class="panel-item p-4"
+              class="page-section page-section--sm bg-surface-2"
             >
               <div class="flex flex-wrap items-center justify-between gap-2">
                 <div>
-                  <p class="meta-label">{{ score.type }}</p>
-                  <p class="panel-value">{{ score.label }}</p>
+                  <p class="text-xs uppercase tracking-[0.2em] text-muted">{{ score.type }}</p>
+                  <p class="text-sm font-medium">{{ score.label }}</p>
                 </div>
-                <p class="text-caption">{{ score.date }}</p>
+                <p class="text-xs text-muted">{{ score.date }}</p>
               </div>
               <div class="mt-4">
-                <div class="flex items-center justify-between text-caption">
+                <div class="flex items-center justify-between text-xs text-muted">
                   <span>Score</span>
                   <span>{{ score.score }}/27</span>
                 </div>
-                <div class="progress-track mt-2 h-2 w-full overflow-hidden rounded-full">
+                <div class="mt-2 h-2 w-full overflow-hidden rounded-full bg-warning">
                   <div
-                    class="progress-fill h-full rounded-full"
+                    class="h-full rounded-full bg-success"
                     :style="{ width: `${(score.score / 27) * 100}%` }"
                   ></div>
                 </div>
               </div>
             </div>
           </div>
-          <p v-else class="mt-6 text-sm text-subtle">
+          <p v-else class="mt-6 text-sm text-muted">
             Demo data cleared. Add a new check-in to see scores.
           </p>
         </div>
 
-        <div class="page-section">
+        <div class="page-section bg-surface">
           <div class="flex items-center justify-between">
             <div>
-              <p class="section-label">Mood history list</p>
-              <h2 class="section-title">Recent check-ins</h2>
+              <p class="text-xs uppercase tracking-[0.2em] text-muted">Mood history list</p>
+              <h2 class="text-2xl font-semibold">Recent check-ins</h2>
             </div>
-            <span class="pill-muted">Last 14 days</span>
+            <span class="pill bg-warning">Last 14 days</span>
           </div>
 
           <ul v-if="moodHistory.length" class="mt-6 space-y-3">
             <li
               v-for="mood in moodHistory"
               :key="`${mood.date}-${mood.label}`"
-              class="list-row"
+              class="page-section page-section--sm flex items-center justify-between bg-surface-2"
             >
               <div>
-                <p class="panel-value">{{ mood.label }}</p>
-                <p class="text-caption">{{ mood.note }}</p>
+                <p class="text-sm font-medium">{{ mood.label }}</p>
+                <p class="text-xs text-muted">{{ mood.note }}</p>
               </div>
-              <span class="text-caption">{{ mood.date }}</span>
+              <span class="text-xs text-muted">{{ mood.date }}</span>
             </li>
           </ul>
-          <p v-else class="mt-6 text-sm text-subtle">
+          <p v-else class="mt-6 text-sm text-muted">
             Mood history cleared. Add a new mood check to populate this list.
           </p>
         </div>
       </section>
 
       <aside class="space-y-6">
-        <div class="page-section">
-          <p class="section-label">Simple commands</p>
+        <div class="page-section bg-surface">
+          <p class="text-xs uppercase tracking-[0.2em] text-muted">Simple commands</p>
           <div class="mt-5 space-y-4">
-            <div class="panel-item px-4 py-3">
-              <label class="meta-label" for="quizFilter">
+            <div class="page-section page-section--sm bg-surface-2">
+              <label class="text-xs uppercase tracking-[0.2em] text-muted" for="quizFilter">
                 Filter by quiz type
               </label>
               <select
                 id="quizFilter"
                 v-model="activeFilter"
-                class="surface-cream-strong mt-2 w-full rounded-xl px-3 py-2 text-sm text-primary"
+                class="mt-2 w-full rounded-xl border bg-surface-2 px-3 py-2 text-sm"
               >
                 <option value="all">All quiz types</option>
                 <option v-for="type in quizTypes" :key="type" :value="type">{{ type }}</option>
@@ -108,7 +108,7 @@
             </div>
 
             <button
-              class="panel-action panel-action--info"
+              class="button button--lg w-full justify-between bg-info"
               @click="toggleLast7Days"
             >
               <span>View last 7 days</span>
@@ -116,7 +116,7 @@
             </button>
 
             <button
-              class="panel-action panel-action--danger"
+              class="button button--lg w-full justify-between bg-danger"
               @click="clearDemoData"
             >
               <span>Clear demo data</span>
@@ -125,8 +125,8 @@
           </div>
         </div>
 
-        <div class="page-section page-section--gradient-emerald">
-          <p class="section-label">Insights</p>
+        <div class="page-section bg-success">
+          <p class="text-xs uppercase tracking-[0.2em] text-muted">Insights</p>
           <div class="mt-4 space-y-3 text-sm text-muted">
             <p>
               Track progress week over week and review patterns that influence your well-being.

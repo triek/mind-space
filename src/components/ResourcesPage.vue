@@ -1,13 +1,13 @@
 <template>
-  <div class="app-shell">
-    <header class="page-header page-header--muted sticky top-0 z-50">
-      <div class="page-container-6xl page-header__layout">
+  <div>
+    <header class="sticky top-0 z-50 border-b bg-surface-2">
+      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4">
         <div>
-          <p class="page-kicker">Mind Space</p>
-          <h1 class="page-title">Resources</h1>
+          <p class="text-sm uppercase tracking-[0.3em] text-faint">Mind Space</p>
+          <h1 class="text-3xl font-semibold">Resources</h1>
         </div>
         <button
-          class="button-pill button-pill--warning button-pill--surface"
+          class="button button--sm bg-warning"
           @click="emit('navigate', 'home')"
         >
           ← Back to home
@@ -15,59 +15,59 @@
       </div>
     </header>
 
-    <main class="page-container-6xl py-4 flex flex-col gap-4">
-      <section class="page-section">
+    <main class="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-4">
+      <section class="page-section bg-surface">
         <div class="flex flex-wrap items-center justify-between gap-3">
           <div>
-            <p class="section-label">Quick reset</p>
-            <h2 class="section-title">Grounding exercises</h2>
+            <p class="text-xs uppercase tracking-[0.2em] text-muted">Quick reset</p>
+            <h2 class="text-2xl font-semibold">Grounding exercises</h2>
           </div>
-          <span class="pill-muted">5 minutes</span>
+          <span class="pill bg-warning">5 minutes</span>
         </div>
-          <div class="mt-6 grid gap-3 sm:grid-cols-2">
-            <div class="panel-item p-4 text-sm text-soft">
-              4-7-8 breathing with a slow count and a longer exhale.
-            </div>
-            <div class="panel-item p-4 text-sm text-soft">
-              5-4-3-2-1 check: name what you can sense around you.
-            </div>
-            <div class="panel-item p-4 text-sm text-soft">
-              Gentle stretch sequence to release neck and shoulder tension.
-            </div>
-            <div class="panel-item p-4 text-sm text-soft">
-              Write down three supportive phrases you want to remember today.
-            </div>
+        <div class="mt-6 grid gap-3 sm:grid-cols-2">
+          <div class="page-section page-section--sm bg-surface-2 text-sm">
+            <span class="text-muted">4-7-8 breathing with a slow count and a longer exhale.</span>
           </div>
-        </section>
+          <div class="page-section page-section--sm bg-surface-2 text-sm">
+            <span class="text-muted">5-4-3-2-1 check: name what you can sense around you.</span>
+          </div>
+          <div class="page-section page-section--sm bg-surface-2 text-sm">
+            <span class="text-muted">Gentle stretch sequence to release neck and shoulder tension.</span>
+          </div>
+          <div class="page-section page-section--sm bg-surface-2 text-sm">
+            <span class="text-muted">Write down three supportive phrases you want to remember today.</span>
+          </div>
+        </div>
+      </section>
 
-      <section class="page-section">
+      <section class="page-section bg-surface">
         <div class="flex flex-wrap items-center justify-between gap-3">
           <div>
-            <p class="section-label">Self-guided tools</p>
-            <h2 class="section-title">Skill library</h2>
+            <p class="text-xs uppercase tracking-[0.2em] text-muted">Self-guided tools</p>
+            <h2 class="text-2xl font-semibold">Skill library</h2>
           </div>
-          <span class="pill-muted">Updated weekly</span>
+          <span class="pill bg-warning">Updated weekly</span>
         </div>
-        <ul class="mt-6 space-y-3 text-sm text-muted">
-          <li class="panel-item px-4 py-3">
-            Thought reframing worksheet for shifting unhelpful patterns.
+        <ul class="mt-6 space-y-3 text-sm">
+          <li class="page-section page-section--sm bg-surface-2">
+            <span class="text-muted">Thought reframing worksheet for shifting unhelpful patterns.</span>
           </li>
-          <li class="panel-item px-4 py-3">
-            Energy map template to track tasks that drain or restore you.
+          <li class="page-section page-section--sm bg-surface-2">
+            <span class="text-muted">Energy map template to track tasks that drain or restore you.</span>
           </li>
-          <li class="panel-item px-4 py-3">
-            Mood tracker journal prompts for morning and evening check-ins.
+          <li class="page-section page-section--sm bg-surface-2">
+            <span class="text-muted">Mood tracker journal prompts for morning and evening check-ins.</span>
           </li>
-          <li class="panel-item px-4 py-3">
-            Sleep wind-down routine with gentle audio cues and timers.
+          <li class="page-section page-section--sm bg-surface-2">
+            <span class="text-muted">Sleep wind-down routine with gentle audio cues and timers.</span>
           </li>
         </ul>
       </section>
 
-      <section class="page-section page-section--gradient-amber">
-        <p class="section-label">Community support</p>
-        <h2 class="mt-2 section-title">Connect with guided resources</h2>
-        <p class="text-body-relaxed">
+      <section class="page-section bg-warning">
+        <p class="text-xs uppercase tracking-[0.2em] text-muted">Community support</p>
+        <h2 class="mt-2 text-2xl font-semibold">Connect with guided resources</h2>
+        <p class="mt-3 text-sm text-muted">
           Explore curated podcasts, booklists, and local directories to find ongoing support.
         </p>
       </section>
