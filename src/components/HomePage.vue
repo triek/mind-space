@@ -1,27 +1,11 @@
 <template>
   <div>
-    <header class="sticky top-0 z-50 border-b bg-surface-2">
-      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4">
-        <div>
-          <h1 class="text-3xl font-semibold">MindSpace</h1>
-        </div>
-      </div>
-    </header>
+    <PageHeader title="Home" />
 
     <main class="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-4">
       <section class="page-section bg-surface">
-        <div class="flex flex-wrap items-start justify-between gap-4">
-          <div>
-            <p class="text-xs uppercase tracking-[0.2em] text-muted">Mood check</p>
-            <h2 class="text-2xl font-semibold">How are you feeling right now?</h2>
-            <p class="mt-2 text-sm text-muted">
-              Tap a mood to start your daily log. You can update it anytime.
-            </p>
-          </div>
-          <div class="pill bg-warning">
-            <span class="h-2 w-2 rounded-full bg-success"></span>
-            Check-in open
-          </div>
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <h2 class="text-2xl font-semibold">How are you feeling today?</h2>
         </div>
 
         <div class="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -110,5 +94,7 @@
 
 
 <script setup>
+import PageHeader from './PageHeader.vue'
+
 const emit = defineEmits(['navigate'])
 </script>

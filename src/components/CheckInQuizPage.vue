@@ -1,37 +1,12 @@
 <template>
   <div>
-    <header class="sticky top-0 z-50 border-b bg-surface-2">
-      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4">
-        <div>
-          <p class="text-sm uppercase tracking-[0.3em] text-faint">Mind Space</p>
-          <h1 class="text-3xl font-semibold">Assessment</h1>
-        </div>
-        <div class="flex items-center gap-3">
-          <button
-            class="button button--sm bg-success"
-            @click="emit('navigate', 'home')"
-          >
-            ← Back to home
-          </button>
-        </div>
-      </div>
-    </header>
+    <PageHeader title="Assessment" />
 
     <main class="mx-auto grid max-w-6xl gap-4 px-4 py-4 lg:grid-cols-[2fr_1fr]">
       <section class="space-y-4">
         <div class="page-section bg-surface">
-          <div class="flex flex-wrap items-start justify-between gap-4">
-            <div>
-              <p class="text-xs uppercase tracking-[0.2em] text-muted">Pick ONE quiz to start</p>
-              <h2 class="text-2xl font-semibold">Choose your check-in</h2>
-              <p class="mt-2 text-sm text-muted">
-                Select a short assessment to capture how you are feeling today. You can run one at a time.
-              </p>
-            </div>
-            <div class="pill bg-warning">
-              <span class="h-2 w-2 rounded-full bg-success"></span>
-              Ready to start
-            </div>
+          <div class="flex flex-wrap items-center justify-between gap-4">
+            <h2 class="text-2xl font-semibold">Choose your check-in</h2>
           </div>
           <div class="mt-6 grid gap-3 sm:grid-cols-3">
             <button
@@ -205,6 +180,7 @@
 
 <script setup>
 import { computed, ref } from 'vue'
+import PageHeader from './PageHeader.vue'
 
 const emit = defineEmits(['navigate'])
 

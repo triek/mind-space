@@ -1,33 +1,12 @@
 <template>
   <div>
-    <header class="sticky top-0 z-50 border-b bg-surface-2">
-      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4">
-        <div>
-          <p class="text-sm uppercase tracking-[0.3em] text-faint">Mind Space</p>
-          <h1 class="text-3xl font-semibold">Thread Detail</h1>
-        </div>
-        <button
-          class="button button--sm bg-success"
-          @click="emit('navigate', 'home')"
-        >
-          Back to dashboard
-        </button>
-      </div>
-    </header>
+    <PageHeader title="Thread Detail" />
 
     <main class="mx-auto grid max-w-6xl gap-4 px-4 py-4 lg:grid-cols-[2fr_1fr]">
       <section class="space-y-4">
         <div class="page-section bg-surface">
-          <div class="flex flex-wrap items-start justify-between gap-4">
-            <div>
-              <p class="text-xs uppercase tracking-[0.2em] text-muted">Timeline</p>
-              <h2 class="text-2xl font-semibold">Work-life balance check-in</h2>
-              <p class="mt-2 text-sm text-muted">
-                A running record of your conversation with your counselor. Replies are placeholders for
-                now.
-              </p>
-            </div>
-            <span class="pill bg-warning">Active</span>
+          <div class="flex flex-wrap items-center justify-between gap-4">
+            <h2 class="text-2xl font-semibold">Work-life balance check-in</h2>
           </div>
           <div class="mt-6 space-y-4">
             <div class="page-section page-section--sm bg-surface-2">
@@ -115,5 +94,7 @@
 </template>
 
 <script setup>
+import PageHeader from './PageHeader.vue'
+
 const emit = defineEmits(['navigate'])
 </script>

@@ -1,32 +1,12 @@
 <template>
   <div>
-    <header class="sticky top-0 z-50 border-b bg-surface-2">
-      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4">
-        <div>
-          <p class="text-sm uppercase tracking-[0.3em] text-faint">Mind Space</p>
-          <h1 class="text-3xl font-semibold">Progress Page</h1>
-        </div>
-        <button
-          class="button button--sm bg-success"
-          @click="emit('navigate', 'home')"
-        >
-          ← Back to home
-        </button>
-      </div>
-    </header>
+    <PageHeader title="Progress" />
 
     <main class="mx-auto grid max-w-6xl gap-4 px-4 py-4 lg:grid-cols-[2fr_1fr]">
       <section class="space-y-4">
         <div class="page-section bg-surface">
           <div class="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p class="text-xs uppercase tracking-[0.2em] text-muted">Score trends</p>
-              <h2 class="text-2xl font-semibold">Past scores over time</h2>
-            </div>
-            <div class="pill bg-warning">
-              <span class="h-2 w-2 rounded-full bg-success"></span>
-              {{ filteredScores.length }} records
-            </div>
+            <h2 class="text-2xl font-semibold">Past scores over time</h2>
           </div>
 
           <div v-if="filteredScores.length" class="mt-6 space-y-4">
@@ -143,6 +123,7 @@
 
 <script setup>
 import { computed, ref } from 'vue'
+import PageHeader from './PageHeader.vue'
 
 const emit = defineEmits(['navigate'])
 

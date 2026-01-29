@@ -1,40 +1,12 @@
 <template>
   <div>
-    <header class="sticky top-0 z-50 border-b bg-surface-2">
-      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4">
-        <div>
-          <p class="text-sm uppercase tracking-[0.3em] text-faint">Mind Space</p>
-          <h1 class="text-3xl font-semibold">New Consultation Thread</h1>
-        </div>
-        <div class="flex items-center gap-3">
-          <div class="pill pill--lg bg-success">
-            Draft in progress
-          </div>
-          <button
-            class="button button--sm bg-success"
-            @click="emit('navigate', 'home')"
-          >
-            Back to Home
-          </button>
-        </div>
-      </div>
-    </header>
+    <PageHeader title="New Consultation Thread" />
 
     <main class="mx-auto grid max-w-6xl gap-6 px-4 py-4 lg:grid-cols-[2fr_1fr]">
       <section class="space-y-6">
         <div class="page-section bg-surface">
-          <div class="flex flex-wrap items-start justify-between gap-4">
-            <div>
-              <p class="text-xs uppercase tracking-[0.2em] text-muted">New consultation thread</p>
-              <h2 class="text-2xl font-semibold">Explain what’s happening</h2>
-              <p class="mt-2 text-sm text-muted">
-                Share the story in your own words or choose a topic to guide the thread.
-              </p>
-            </div>
-            <div class="pill bg-warning">
-              <span class="h-2 w-2 rounded-full bg-success"></span>
-              Drafting
-            </div>
+          <div class="flex flex-wrap items-center justify-between gap-4">
+            <h2 class="text-2xl font-semibold">Explain what’s happening</h2>
           </div>
           <div class="mt-6 space-y-4">
             <label class="block text-sm font-medium text-muted" for="thread-notes">
@@ -111,5 +83,7 @@
 </template>
 
 <script setup>
+import PageHeader from './PageHeader.vue'
+
 const emit = defineEmits(['navigate'])
 </script>

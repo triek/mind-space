@@ -1,28 +1,11 @@
 <template>
   <div>
-    <header class="sticky top-0 z-50 border-b bg-surface-2">
-      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4">
-        <div>
-          <p class="text-sm uppercase tracking-[0.3em] text-faint">Mind Space</p>
-          <h1 class="text-3xl font-semibold">Resources</h1>
-        </div>
-        <button
-          class="button button--sm bg-warning"
-          @click="emit('navigate', 'home')"
-        >
-          ← Back to home
-        </button>
-      </div>
-    </header>
+    <PageHeader title="Resources" />
 
     <main class="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-4">
       <section class="page-section bg-surface">
         <div class="flex flex-wrap items-center justify-between gap-3">
-          <div>
-            <p class="text-xs uppercase tracking-[0.2em] text-muted">Quick reset</p>
-            <h2 class="text-2xl font-semibold">Grounding exercises</h2>
-          </div>
-          <span class="pill bg-warning">5 minutes</span>
+          <h2 class="text-2xl font-semibold">Grounding exercises</h2>
         </div>
         <div class="mt-6 grid gap-3 sm:grid-cols-2">
           <div class="page-section page-section--sm bg-surface-2 text-sm">
@@ -76,5 +59,7 @@
 </template>
 
 <script setup>
+import PageHeader from './PageHeader.vue'
+
 const emit = defineEmits(['navigate'])
 </script>

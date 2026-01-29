@@ -1,28 +1,11 @@
 <template>
   <div>
-    <header class="sticky top-0 z-50 border-b bg-surface-2">
-      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4">
-        <div>
-          <p class="text-sm uppercase tracking-[0.3em] text-faint">Mind Space</p>
-          <h1 class="text-3xl font-semibold">Urgent Help</h1>
-        </div>
-        <button
-          class="button button--sm bg-success"
-          @click="emit('navigate', 'home')"
-        >
-          ← Back to home
-        </button>
-      </div>
-    </header>
+    <PageHeader title="Urgent Help" />
 
     <main class="mx-auto grid max-w-6xl gap-4 px-4 py-4 lg:grid-cols-[2fr_1fr]">
       <section class="space-y-4">
         <div class="page-section page-section--lg bg-danger">
-          <p class="text-xs uppercase tracking-[0.2em] text-muted">Immediate support</p>
-          <h2 class="mt-2 text-2xl font-semibold">You are not alone</h2>
-          <p class="mt-3 text-sm leading-relaxed text-muted">
-            Reach out to trusted people, professionals, or local crisis lines for real-time support.
-          </p>
+          <h2 class="text-2xl font-semibold">You are not alone</h2>
           <div class="page-section page-section--sm mt-5 bg-surface-2 text-sm">
             <span class="text-muted">Crisis links placeholder</span>
           </div>
@@ -85,5 +68,7 @@
 </template>
 
 <script setup>
+import PageHeader from './PageHeader.vue'
+
 const emit = defineEmits(['navigate'])
 </script>
