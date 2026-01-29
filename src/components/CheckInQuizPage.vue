@@ -122,8 +122,7 @@
 
       <aside class="space-y-6">
         <div class="page-section bg-success">
-          <p class="text-xs uppercase tracking-[0.2em] text-muted">Simple commands</p>
-          <div class="mt-5 space-y-4">
+          <div class="space-y-4">
             <button
               class="button button--lg w-full justify-between bg-surface-2"
               @click="startQuiz"

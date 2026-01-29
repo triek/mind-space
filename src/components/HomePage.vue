@@ -27,28 +27,6 @@
       <section class="page-section bg-surface">
         <div class="flex flex-wrap items-start justify-between gap-4">
           <div>
-            <p class="text-xs uppercase tracking-[0.2em] text-muted">Latest thread</p>
-            <h3 class="text-xl font-semibold">Work-life balance</h3>
-            <p class="mt-2 text-sm text-muted">
-              You mentioned feeling stretched in meetings. Suggested focus: short recovery breaks.
-            </p>
-          </div>
-          <span class="pill bg-warning">Updated 2h ago</span>
-        </div>
-        <div class="mt-6 flex flex-wrap items-center justify-between gap-3">
-          <p class="text-xs uppercase tracking-[0.2em] text-muted">Last step saved</p>
-          <button
-            class="button button--sm rounded-full bg-success"
-            @click="emit('navigate', 'thread-detail')"
-          >
-            Continue thread
-          </button>
-        </div>
-      </section>
-
-      <section class="page-section bg-surface">
-        <div class="flex flex-wrap items-start justify-between gap-4">
-          <div>
             <p class="text-xs uppercase tracking-[0.2em] text-muted">Create a new thread</p>
             <h3 class="text-xl font-semibold">What feels important today?</h3>
             <p class="mt-2 text-sm text-muted">
@@ -68,22 +46,20 @@
         </button>
       </section>
 
-      <section class="page-section bg-info">
-        <p class="text-xs uppercase tracking-[0.2em] text-muted">Quick actions</p>
-        <div class="mt-4 grid gap-3 sm:grid-cols-2">
+      <section class="page-section bg-surface">
+        <div class="flex flex-wrap items-start justify-between">
+          <h3 class="text-xl font-semibold">Work-life balance</h3>
+          <p class="mt-2 text-sm">
+            You mentioned feeling stretched in meetings. Suggested focus: short recovery breaks.
+          </p>
+        </div>
+        <div class="mt-4 flex flex-wrap items-center justify-between gap-3">
+          <p class="text-xs text-muted">Updated 2h ago</p>
           <button
-            class="button button--lg w-full justify-between bg-success"
-            @click="emit('navigate', 'assessment')"
+            class="button button--sm rounded-full bg-success"
+            @click="emit('navigate', 'thread-detail')"
           >
-            <span>Start an assessment</span>
-            <span class="text-lg">📝</span>
-          </button>
-          <button
-            class="button button--lg w-full justify-between bg-primary"
-            @click="emit('navigate', 'progress')"
-          >
-            <span>Review progress</span>
-            <span class="text-lg">📈</span>
+            Continue thread
           </button>
         </div>
       </section>

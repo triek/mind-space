@@ -4,7 +4,7 @@
       <component :is="activeComponent" @navigate="handleNavigate" />
     </div>
     <nav
-      class="fixed bottom-5 left-1/2 z-20 flex -translate-x-1/2 items-center gap-4 rounded-full border bg-surface-2 px-6 py-3 backdrop-blur"
+      class="fixed bottom-5 left-1/2 z-20 flex -translate-x-1/2 items-center gap-4 rounded-full bg-surface-2 px-6 py-3 shadow-sm backdrop-blur"
       aria-label="Primary"
     >
       <button
@@ -13,7 +13,7 @@
         class="nav-button"
         :class="[
           item.color,
-          activeNav === item.page ? 'border-2' : 'opacity-80'
+          activeNav === item.page ? 'ring-2 ring-foreground/10' : 'opacity-80'
         ]"
         :aria-label="item.label"
         @click="handleNavigate(item.page)"

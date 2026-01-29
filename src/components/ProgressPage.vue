@@ -44,17 +44,16 @@
         <div class="page-section bg-surface">
           <div class="flex items-center justify-between">
             <div>
-              <p class="text-xs uppercase tracking-[0.2em] text-muted">Mood history list</p>
               <h2 class="text-2xl font-semibold">Recent check-ins</h2>
             </div>
-            <span class="pill bg-warning">Last 14 days</span>
+            <span class="pill">Last 14 days</span>
           </div>
 
           <ul v-if="moodHistory.length" class="mt-6 space-y-3">
             <li
               v-for="mood in moodHistory"
               :key="`${mood.date}-${mood.label}`"
-              class="page-section page-section--sm flex items-center justify-between bg-surface-2"
+              class="page-section page-section--sm flex items-center justify-between bg-success"
             >
               <div>
                 <p class="text-sm font-medium">{{ mood.label }}</p>
@@ -71,12 +70,7 @@
 
       <aside class="space-y-6">
         <div class="page-section bg-surface">
-          <p class="text-xs uppercase tracking-[0.2em] text-muted">Simple commands</p>
-          <div class="mt-5 space-y-4">
-            <div class="page-section page-section--sm bg-surface-2">
-              <label class="text-xs uppercase tracking-[0.2em] text-muted" for="quizFilter">
-                Filter by quiz type
-              </label>
+          <div class="space-y-4">
               <select
                 id="quizFilter"
                 v-model="activeFilter"
@@ -85,7 +79,6 @@
                 <option value="all">All quiz types</option>
                 <option v-for="type in quizTypes" :key="type" :value="type">{{ type }}</option>
               </select>
-            </div>
 
             <button
               class="button button--lg w-full justify-between bg-info"
@@ -106,7 +99,7 @@
         </div>
 
         <div class="page-section bg-success">
-          <p class="text-xs uppercase tracking-[0.2em] text-muted">Insights</p>
+            <h2 class="text-xl font-semibold">Insights</h2>
           <div class="mt-4 space-y-3 text-sm text-muted">
             <p>
               Track progress week over week and review patterns that influence your well-being.

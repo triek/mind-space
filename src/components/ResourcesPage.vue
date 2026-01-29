@@ -7,7 +7,7 @@
         <div class="flex flex-wrap items-center justify-between gap-3">
           <h2 class="text-2xl font-semibold">Grounding exercises</h2>
         </div>
-        <div class="mt-6 grid gap-3 sm:grid-cols-2">
+        <div class="mt-4 grid gap-3 sm:grid-cols-2">
           <div class="page-section page-section--sm bg-surface-2 text-sm">
             <span class="text-muted">4-7-8 breathing with a slow count and a longer exhale.</span>
           </div>
@@ -25,13 +25,10 @@
 
       <section class="page-section bg-surface">
         <div class="flex flex-wrap items-center justify-between gap-3">
-          <div>
-            <p class="text-xs uppercase tracking-[0.2em] text-muted">Self-guided tools</p>
-            <h2 class="text-2xl font-semibold">Skill library</h2>
-          </div>
+          <h2 class="text-2xl font-semibold">Skill library</h2>
           <span class="pill bg-warning">Updated weekly</span>
         </div>
-        <ul class="mt-6 space-y-3 text-sm">
+        <ul class="mt-4 space-y-3 text-sm">
           <li class="page-section page-section--sm bg-surface-2">
             <span class="text-muted">Thought reframing worksheet for shifting unhelpful patterns.</span>
           </li>
@@ -48,8 +45,7 @@
       </section>
 
       <section class="page-section bg-warning">
-        <p class="text-xs uppercase tracking-[0.2em] text-muted">Community support</p>
-        <h2 class="mt-2 text-2xl font-semibold">Connect with guided resources</h2>
+        <h2 class="text-2xl font-semibold">Connect with guided resources</h2>
         <p class="mt-3 text-sm text-muted">
           Explore curated podcasts, booklists, and local directories to find ongoing support.
         </p>

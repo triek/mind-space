@@ -48,8 +48,7 @@
 
 @layer components {
   .page-section {
-    @apply rounded-3xl border p-4;
-    border-color: var(--color-border);
+    @apply rounded-3xl p-4 shadow-sm;
   }
 
   .page-section--lg {
@@ -61,8 +60,7 @@
   }
 
   .button {
-    @apply inline-flex items-center justify-center gap-2 rounded-2xl border px-4 py-2 text-sm font-medium;
-    border-color: var(--color-border);
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-2 text-sm font-medium shadow-sm;
   }
 
   .button--sm {
@@ -74,8 +72,7 @@
   }
 
   .pill {
-    @apply inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-medium;
-    border-color: var(--color-border);
+    @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-medium shadow-sm;
   }
 
   .pill--lg {
@@ -83,8 +80,7 @@
   }
 
   .nav-button {
-    @apply flex h-14 w-14 items-center justify-center rounded-full border text-xl font-semibold;
-    border-color: var(--color-border);
+    @apply flex h-14 w-14 items-center justify-center rounded-full text-xl font-semibold shadow-sm;
   }
 
   .textarea-base {
