@@ -4,7 +4,7 @@
       <component :is="activeComponent" @navigate="handleNavigate" />
     </div>
     <nav
-      class="fixed bottom-5 left-1/2 z-20 flex -translate-x-1/2 items-center gap-4 rounded-full bg-surface-2 px-6 py-3 shadow-sm backdrop-blur"
+      class="fixed bottom-0 left-0 right-0 z-20 flex items-center justify-around gap-4 bg-surface-2 px-6 py-3"
       aria-label="Primary"
     >
       <button
