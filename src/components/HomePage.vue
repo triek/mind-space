@@ -66,7 +66,6 @@
     </main>
   </div>
 
-  
 </template>
 
 <script setup>
